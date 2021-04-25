@@ -6,10 +6,6 @@ navbar:
       href: index.html
     - text: "Data Science Projects"
       href: datascience.html
-    - text: "Training"
-      href: training.html
-    - text: "Resume"
-      href: Resume_Ryan_Bieber.docx
 
   right:
     - icon: fa-envelope fa-lg

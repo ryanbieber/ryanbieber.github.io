@@ -1,4 +1,5 @@
 ---
+title: "Home"
 ---
 
 
@@ -8,7 +9,7 @@
 
 My passion is using data to show how things work whether it be in the realm of predicting, forecasting, descriptive, or visualizations. Data should be used in a way that will show relationships previously unknown or prove relationships that were previously assumed. I am an avid R user and do most of my programming in that language with knowledge of many others. Using docker images that contain solutions using R as a backend environment are fairly new and extremely fun to work on. R has the ability, much like python, to deploy into clusters using [plumber](https://www.rplumber.io/) as a REST API or [shiny](https://shiny.rstudio.com/) as a web application. It is possible to have an entire web application be built in just R(with maybe a little html/js). Besides these, I love time-series and machine learning problems that really challenge how I think about a topic. 
 
-I graduated from the University of North Dakota with an MS in Applied Economics in 2019 and am currently a data scientist at IBM in the finance department.
+I currently am a data scientist at C. H. Robinson focusing on time-series and cloud deployments. 
 
 Besides spending my weekends programming, I like to hike, cook, and also train for strongman competitions.
 
