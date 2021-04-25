@@ -4,10 +4,14 @@ title: "Data Science"
 
 <link rel="stylesheet" href="styles.css" type="text/css">
 
+## Data Science Projects In-progess
+
+- World of Warcraft, Item Prices Dashboard/Forecasting, This project is semi-related to the other World of Warcraft one in which I looked at black market gold prices and compared them to token prices. This one instead is looking at all the items on the AH by server(server-group) and is going to tell you the trend/seasonaility, etc. Still a work in progress as I just started my new job so I have been focusing a lot of my time into that instead.
+
 
 ## Data Science Projects Completed
 
-# This list isnt exhaustive just a few ones I picked out.
+### This list isnt exhaustive just a few ones I picked out.
 
 - [World of Warcraft, Black Market Gold](https://github.com/ryanbieber/Wow-Gold) The whole point of this project was to look at how patches impacted gold prices in world of warcraft. It evolved into trying to predict when to *buy gold* in the mmo to try and play the market just like in the stock market. It turns out that gold prices are very unpredictable and follow a more or less stochastic trend. (One of my first projects)
 
