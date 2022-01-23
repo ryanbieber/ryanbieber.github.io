@@ -1,22 +1,33 @@
----
-title: "Training"
----
-
-## Training 
-
-
-
-### Deadlift 505x5
-
-<video width="720" height="480" controls>
-  <source src="videos/deadlift505x5.mp4" type="video/mp4">
-</video>
-
-### Dip bw(190ish)+225
-
-<video width="720" height="480" controls>
-  <source src="videos/dip225.mp4" type="video/mp4">
-</video>
+<section class="nes-container is-dark">
+  <section class="message-list">
+      <section class="message -left">
+        <i class="nes-mario"></i>
+        <!-- Balloon -->
+        <div class="nes-balloon from-left is-dark">
+          I try to compete in strongman.
+  </section>
+</section>
+  
 
 
 
+<div class="nes-table-responsive">
+  <table class="nes-table is-bordered is-dark">
+    <thead>
+      <tr>
+        <th>Table.is-dark</th>
+        <th>Table.is-bordered</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Thou hast had a good morning</td>
+        <td>Thou hast had a good afternoon</td>
+      </tr>
+      <tr>
+        <td>Thou hast had a good morning</td>
+        <td>Thou hast had a good afternoon</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

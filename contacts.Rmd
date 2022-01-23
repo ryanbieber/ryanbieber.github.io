@@ -1,7 +1,0 @@
----
-title: "Contacts"
----
-
-<link rel="stylesheet" href="styles.css" type="text/css">
-
-I check Github and linkdin messages regularly and those would be the safest/fastest options. 

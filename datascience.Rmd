@@ -1,17 +1,13 @@
----
-title: "Data Science"
----
 
 <link rel="stylesheet" href="styles.css" type="text/css">
 
-## Data Science Projects In-progess
+<span class="nes-text is-error">Projects I would like to work on</span>
 
-- World of Warcraft, Item Prices Dashboard/Forecasting, This project is semi-related to the other World of Warcraft one in which I looked at black market gold prices and compared them to token prices. This one instead is looking at all the items on the AH by server(server-group) and is going to tell you the trend/seasonaility, etc. Still a work in progress as I just started my new job so I have been focusing a lot of my time into that instead.
+- Covid death data, recently heard(Jan 2022) that a judge is making the FDA release the data in 8ish months instead of 2097. I am sure a lot of people are curious about the data on this pandemic.
 
+- Crypto trading bot, this is more of a private project that will utilize various time-series methods to predict prices and place buy/sell orders.
 
-## Data Science Projects Completed
-
-### This list isnt exhaustive just a few ones I picked out.
+<span class="nes-text is-success">Completed Projects</span>
 
 - [World of Warcraft, Black Market Gold](https://github.com/ryanbieber/Wow-Gold) The whole point of this project was to look at how patches impacted gold prices in world of warcraft. It evolved into trying to predict when to *buy gold* in the mmo to try and play the market just like in the stock market. It turns out that gold prices are very unpredictable and follow a more or less stochastic trend. (One of my first projects)
 
@@ -23,11 +19,9 @@ title: "Data Science"
 
 - [Cloud Deployment Modelling Orchestration](https://github.com/ryanbieber/model-deployment-kubernetes) I wanted to have the ability to work in whatever language I wanted so I created a sort of container orchestration template that has 3 separate containers that can run whatever images I want them to. These images can then push their data to a volume which is mounted on each container. This allows for maximum flexibility for using the best language for each job.
 
-## Packages
 
 - [TimeSeriesCatchAll](https://github.com/ryanbieber/Time-Series-Catch-All) A time-series package that runs 1000s of models against your series in parallel. It uses Hyndman's [Forecast](https://pkg.robjhyndman.com/forecast/), [Forecasthybrid](https://cran.r-project.org/web/packages/forecastHybrid/forecastHybrid.pdf), and the package [DLM](https://cran.r-project.org/web/packages/dlm/dlm.pdf) to forecast a time-series. It is in a state where I am happy with it, it is able to go through thousands of models in parallel for a time series and based off the steps forward you want to look it is able to do the backtesting and pick the best model forward.
 
-## Apps
 
 - [Caloric Expenditure](https://ryanbieber.shinyapps.io/BMR_Calc/) This shiny app will calculate how long it will take you to lose/gain weight based on your current caloric deficit/surplus and activity. It also takes into account how lean you are, among other factors, to give you a [Basal Metabolic Rate](https://en.wikipedia.org/wiki/Basal_metabolic_rate). 
 
