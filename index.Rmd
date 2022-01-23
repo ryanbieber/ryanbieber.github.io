@@ -1,16 +1,34 @@
----
-title: "Home"
----
 
 
 <link rel="stylesheet" href="styles.css" type="text/css">
 
 <img src="images/ryan_bieber.jpg" style="width:25%; border:10px solid; margin-right: 20px" align="left">
 
-My passion is using data to show how things work whether it be in the realm of predicting, forecasting, descriptive, or visualizations. Data should be used in a way that will show relationships previously unknown or prove relationships that were previously assumed. I am an avid R user and do most of my programming in that language with knowledge of many others. Using docker images that contain solutions using R as a backend environment are fairly new and extremely fun to work on. R has the ability, much like python, to deploy into clusters using [plumber](https://www.rplumber.io/) as a REST API or [shiny](https://shiny.rstudio.com/) as a web application. It is possible to have an entire web application be built in just R(with maybe a little html/js). Besides these, I love time-series and machine learning problems that really challenge how I think about a topic. 
 
-I currently am a data scientist at C. H. Robinson focusing on time-series and cloud deployments. 
+<br>
+<br>  
+<br>  
+<br>  
+<br>  
+<br>  
 
-Besides spending my weekends programming, I like to hike, cook, and also train for strongman competitions.
+<label for="textarea_field">Bio</label>
 
-P.S. If you want to get in contact with me just click on the envelope in the top right corner. Also, I generally don't do extra data science projects when it is nice out. I generally start to do weekend projects once it gets very cold outside in Minnesota. It is a shame to waste the nice weather inside.
+<div class="nes-container is-dark with-title">
+  <p class="title">Childhood</p>
+  <p>I was born on a warm autmn day of September 9th, 1994. After awaking from my sleep, I was thrust into life against my will. So, I decided that instead of complaining about it I would try to make my life the best it could be. Over the course of my childhood I played soccer, football, was always good at math, liked history, and played computer games. Towards the end of high school, I was doing PSEO(Post Secondary Enrollment Option) which allowed me to take classes at the local community college for free. This helped me pursue a love for math and computers even more as my high school had limited offerings.</p>
+</div>
+
+
+
+<div class="nes-container is-dark with-title">
+  <p class="title">College</p>
+  <p>Fast-foward to college, I majored in Math and Physics initially, but something happened that made me lose interest in physics. I couldn't tell you what but I just had no desire to take those classes at all. I was lost in what I wanted to do, with my focus on math being the sole thing that carried me in my studies. During that time of self-discovery I stumbled upon a book that made me see the light, it was none other than Freakanomics. This book brought to my attention the usefulness of being able to use data to convince a reader of the hypthesis in question. I was hooked. Over the next 2 years in college I continued taking math with a focus on applied math, and also jumped into economics as that was the only major that really allowed me to explore using data and math to show conclusions. </p>
+</div>
+
+<div class="nes-container is-dark with-title">
+  <p class="title">Graduate School</p>
+  <p>Graduate school was next on the list and I knew I didnt want to attend a PhD program, but I did want to continue my quest of data science. Which lead me to the applied economics program at UND(Universtiy of North Dakota), which is where I attended undergraduate as well. This program really allowed me to jump into my data driven studies and showed me a lexicon of methods that I could use. The problem was, they used an ancient program called stata. This is a commonly used language in economics and nothing else. It is a horrible language that is also licensed. This lead me to wanting to use a different language. A better language. One where the people who use it also make the packages. This is R.</p>
+</div>
+
+

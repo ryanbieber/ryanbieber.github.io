@@ -8,14 +8,18 @@ navbar:
       href: datascience.html
 
   right:
-    - icon: fa-envelope fa-lg
-      href: contacts.html
     - icon: fa-github fa-lg
       href: https://github.com/ryanbieber
-    - icon: fa-linkedin fa-lg
-      href: www.linkedin.com/in/ryan-bieber
 
 output:
   html_document:
-    theme: paper
+    theme: cosmo
+    highlight: textmate
+    mathjax: null
+    toc_depth: 3
+    toc_float:
+      collapsed: false
     css: 'styles.css'
+    includes:
+      in_header: include_header.html
+      before_body: include_header.html
