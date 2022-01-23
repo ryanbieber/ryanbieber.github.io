@@ -1,0 +1,33 @@
+<section class="nes-container is-dark">
+  <section class="message-list">
+      <section class="message -left">
+        <i class="nes-mario"></i>
+        <!-- Balloon -->
+        <div class="nes-balloon from-left is-dark">
+          I try to compete in strongman.
+  </section>
+</section>
+  
+
+
+
+<div class="nes-table-responsive">
+  <table class="nes-table is-bordered is-dark">
+    <thead>
+      <tr>
+        <th>Table.is-dark</th>
+        <th>Table.is-bordered</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Thou hast had a good morning</td>
+        <td>Thou hast had a good afternoon</td>
+      </tr>
+      <tr>
+        <td>Thou hast had a good morning</td>
+        <td>Thou hast had a good afternoon</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
