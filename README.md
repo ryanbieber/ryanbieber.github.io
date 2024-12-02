@@ -1,1 +1,1 @@
-A personal consulting website
+A personal website
