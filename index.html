@@ -1,53 +1,173 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Temporal Strategies</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Resume</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        section {
+            margin-bottom: 30px;
+            padding: 15px;
+            border-bottom: 2px solid #eee;
+        }
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+        }
+        h2 {
+            color: #34495e;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 5px;
+        }
+        .job-title {
+            font-weight: bold;
+            color: #2980b9;
+        }
+        .date {
+            color: #7f8c8d;
+            font-style: italic;
+        }
+        .project {
+            background: #f7f9fc;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+        }
+        .education-logo {
+            width: 50px;
+            height: 50px;
+            margin-right: 15px;
+            vertical-align: middle;
+        }
+        .education-entry {
+            margin-bottom: 20px;
+        }
+        .grade {
+            color: #27ae60;
+            font-weight: bold;
+        }
+        .company-section {
+            margin-bottom: 25px;
+        }
+        .role {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+        .location {
+            color: #7f8c8d;
+            font-size: 0.9em;
+        }
+    </style>
 </head>
 <body>
-  <header>
-    <h1 style="font-family: 'Times New Roman', Times, serif; font-weight: bold;">Welcome to Temporal Strategies</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="areas-of-expertise.html">Areas of Expertise</a>
-      <a href="about.html">About</a>
-      <a href="blog.html">Blog</a>
-    </nav>
-  </header>
-  <div class="container"></div>
-    <section class="services">
-      <h2>Services I offer</h2>
-      <hr>
-      <p style="font-size: 1.2em;">My IT consulting firm offers a wide range of services to help businesses harness the power of data and technology. From data analysis and forecasting to generative AI and dashboarding, we provide customized solutions to meet your unique needs. Our team of experts is dedicated to helping you unlock the full potential of your data and drive business growth. Explore our services below to learn more about how we can help you achieve your goals.</p>
-      <div class="service-container">
-      <div class="service-item">
-      <h2>Forecasting</h2>
-      <hr>
-      <img src="images/time-series.jpg" alt="Forecasting" style="width:50%; height:auto;">
-      <p style="font-size: 1.2em;">Utilize advanced AI algorithms to predict future trends, enabling businesses to make informed, data-driven decisions. Our forecasting services help you anticipate market changes, optimize resource allocation, and stay ahead of the competition.</p>
-      </div>
-      <div class="service-item">
-      <h2>Generative AI</h2>
-      <hr>
-      <img src="images/gen-ai.jpg" alt="Generative AI" style="width:50%; height:auto;">
-      <p style="font-size: 1.2em;">Leverage generative AI to create innovative solutions and automate complex tasks. Our generative AI services include developing custom AI models that can generate new content, such as text, images, and music, based on existing data. These models can be used for a variety of applications, including content creation, design, and problem-solving. By harnessing the power of generative AI, we help businesses enhance creativity, improve efficiency, and drive innovation.</p>
-      </div>
-      <div class="service-item">
-      <h2>Dashboarding</h2>
-      <hr>
-      <img src="images/Dashboarding.jpg" alt="Dashboarding" style="width:50%; height:auto;">
-      <p style="font-size: 1.2em;">Design and implement interactive dashboards to visualize key metrics and insights. Our dashboarding services provide real-time data visualization, enabling you to monitor performance, track progress, and make data-driven decisions. By consolidating data from various sources into a single, easy-to-understand interface, our dashboards help you identify trends, uncover opportunities, and address issues promptly. Whether you need to track sales, monitor operational efficiency, or analyze customer behavior, our customized dashboards offer the insights you need to drive your business forward.</p>
-      </div>
-      </div>
+    <h1>Your Name</h1>
+    
+    <section id="summary">
+        <h2>Professional Summary</h2>
+        <p>Expert problem solver. My passion is figuring out why things are broken, how to be more efficient, and how to make products people will use.
+          I have a strong background in product development, engineering, and data science. 
+        </p>
     </section>
-    <hr>
-    <section class="contact-form">
-      <h1>Contact Me</h1>
-      <hr>
-      <p style="font-size: 1.2em">If you have any questions or need more information, reach out to me at <a href="mailto:temporalstrategies@proton.me">temporalstrategies@proton.me</a>. I will get back to you as soon as possible.</p>
+
+    <section id="employment">
+        <h2>Employment History</h2>
+        
+        <div class="company-section">
+            <p class="job-title">C.H. Robinson</p>
+            <p class="date">Full-time · 4 yrs 3 mos</p>
+            <p class="location">Eden Prairie, Minnesota, United States</p>
+
+            <div class="role">
+                <p class="job-title">Lead Data Scientist</p>
+                <p class="date">Mar 2025 - Present · 3 mos</p>
+            </div>
+            
+            <div class="role">
+                <p class="job-title">Senior Data Scientist</p>
+                <p class="date">Jun 2022 - May 2025 · 3 yrs</p>
+            </div>
+            
+            <div class="role">
+                <p class="job-title">Data Scientist</p>
+                <p class="date">Mar 2021 - Jul 2022 · 1 yr 5 mos</p>
+            </div>
+        </div>
+
+        <div class="company-section">
+            <p class="job-title">Data Scientist - IBM</p>
+            <p class="date">Jul 2019 - Feb 2021 · 1 yr 8 mos</p>
+            <p class="location">Rochester, Minnesota, United States</p>
+            <ul>
+                <li>Developed and managed a time-series package in R specialized for automating the backtesting of financial forecasts</li>
+                <li>Constructed a webhook application to capture real-time events from Trello boards, resulting in time savings equivalent to over 50 FTE</li>
+                <li>Mentored junior data scientists, teaching Python, R, and time-series techniques</li>
+            </ul>
+        </div>
+
+        <div class="company-section">
+            <p class="job-title">Graduate Assistant - University of North Dakota</p>
+            <p class="date">Aug 2017 - Jul 2019 · 2 yrs</p>
+            <p class="location">Grand Forks, North Dakota, United States</p>
+            <ul>
+                <li>Provided tutoring support in Economics courses including Macro/Microeconomics, International Economics, and Econometrics</li>
+                <li>Engaged in data cleaning tasks to enhance data accessibility and usability for professors</li>
+            </ul>
+        </div>
+
+        <div class="company-section">
+            <p class="job-title">Consultant Internship - Infotech</p>
+            <p class="date">May 2018 - Aug 2018 · 4 mos</p>
+            <p class="location">Gainesville, Florida, United States</p>
+            <ul>
+                <li>Conducted data analysis on class action lawsuits to identify collusion and antitrust violations</li>
+                <li>Assisted expert witnesses in preparing testimony for depositions</li>
+                <li>Received letter of recommendation from CEO</li>
+            </ul>
+        </div>
+
+        <div class="company-section">
+            <p class="job-title">Undergraduate Research Fellow - Mayo Clinic</p>
+            <p class="date">May 2015 - Aug 2015 · 4 mos</p>
+            <p class="location">Rochester, Minnesota, United States</p>
+            <ul>
+                <li>Collaborated with imaging group on Magnetic Resonance Elastography (MRE) projects</li>
+                <li>Conducted Thin Plate Modeling in MATLAB using Lamb waves for heart wall simulation</li>
+                <li>Presented research findings at Biomedical Engineering college poster session</li>
+            </ul>
+        </div>
     </section>
-  </div>
+
+    <section id="education">
+        <h2>Education</h2>
+        <div class="education-entry">
+            <p class="job-title">Master of Science - MS, Applied Economics</p>
+            <p>University of North Dakota</p>
+            <p class="date">2017 - 2019</p>
+            <p class="grade">Grade: 4.0</p>
+        </div>
+
+        <div class="education-entry">
+            <p class="job-title">Bachelor of Arts & Science - BS Mathematics, BA Economics</p>
+            <p>University of North Dakota</p>
+            <p class="date">2014 - 2017</p>
+            <p class="grade">Grade: 3.65</p>
+            <p>Activities and societies: Society of Physics Students</p>
+        </div>
+
+
+        <div class="education-entry">
+            <p class="job-title">Associate of Arts and Sciences - AAS, Liberal Arts and Sciences/Liberal Studies</p>
+            <p>Rochester Community and Technical College</p>
+            <p class="date">2011 - 2013</p>
+        </div>
+    </section>
+
 </body>
 </html>
