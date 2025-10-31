@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Building Agentic AI Systems at Scale - Ryan Bieber</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../resume.html">Resume</a></li>
+                <li><a href="../projects.html">Projects</a></li>
+                <li><a href="../blog.html">Blog</a></li>
+            </ul>
+        </nav>
+        
+        <div class="content">
+            <article>
+                <header style="text-align: center; padding: 2rem 0; border-bottom: 1px solid #e0e0e0;">
+                    <h1 style="color: #2c3e50; font-size: 2.5rem; margin-bottom: 1rem;">Rewriting Prophet in Rust: Lessons and Discoveries</h1>
+                    <div class="blog-meta" style="font-size: 1rem;">October 31, 2025 • 3 min read</div>
+                    <div class="project-tech" style="display: flex; flex-wrap: wrap; gap: 0.5rem; justify-content: center; margin-top: 1rem;">
+                        <span class="tech-tag">Rust</span>
+                        <span class="tech-tag">Prophet</span>
+                        <span class="tech-tag">Time Series</span>
+                        <span class="tech-tag">Performance</span>
+                    </div>
+                </header>
+                
+                <div style="max-width: 700px; margin: 2rem auto; font-size: 1.1rem; line-height: 1.8; color: #444;">
+                    <h2 style="color: #667eea; margin: 2rem 0 1rem 0;">Introduction</h2>
+                    <p style="margin-bottom: 1.5rem;">
+                        I love time-series. It is one of my true loves in data science. I have spent countless hours digging into them. Hyndman is, in my opinon a godfather of time-series and 
+                        his R package "forecast" was a staple until python got up to speed in this space. Along with him, BSTS was also a good package that I used 
+                        which got me into the baysian side of time-series forecasting.
+                        </p>
+                                            
+
+                        When I think of all the pitfalls of models, ets for example is fast but it falls short when it comes to conditionally handling periods of seasonality, arima is good but it also lands in the same boat along with having to maintain stationarity,
+                        bsts is good but it is also slow and in R so its hard to deploy in production(believe me I did it). Prophet on the other hand is very good when tuned correctly, it is also very fast(with small samples). How do we improve it further? The prophet repo
+                        is maintained by facebook and its hard to get a PR into it with this drastic of a rewrite so I decided to take matters into my own hands and rewrite it in Rust and see what improves.
+                    </p>
+                    
+                    <h2 style="color: #667eea; margin: 2rem 0 1rem 0;">Why Rust?</h2>
+                    <p style="margin-bottom: 1.5rem;">
+                        I used Rust since why not? If you write it in Rust it must be better right? Well, it is better in certain regards but it also has some 
+                        things that will be improved with time. As of writing this(10/30/25), the reverse differencing using enzyme is not in stable rust yet so we are unable to get off of Stan just yet. 
+                        The end goal is to get this in full Rust and remove the Stan dependency. 
+                    </p>
+                    <ul style="margin: 1.5rem 0 1.5rem 2rem;">
+                        <li style="margin-bottom: 0.75rem;">Predictions are 15-20x faster in Rust vs python.</li>
+                        <li style="margin-bottom: 0.75rem;">Ability to use polars/pandas vs just pandas for inputs and outputs speeds up transformations</li>
+                        <li style="margin-bottom: 0.75rem;">Able to tune the underlying model to add weights to values of the time series to further allow for more complex series</li>
+                    </ul>
+                    
+                    <h2 style="color: #667eea; margin: 2rem 0 1rem 0;">Understanding Prophet's Architecture</h2>
+                    <p style="margin-bottom: 1.5rem;">
+                        When I was rewriting this in Rust, I had to first understand how prophet works under the hood. Prophet is based on an additive model where non-linear trends are fit with yearly, weekly, and daily seasonality, plus holiday effects.
+                        The model is rather robust and flexible for the most part but falls short when you want to tune it. You are unable to weight values without doing some hacky things such as duplicating rows to overweight them.
+                        The predict step is also rather slow when you have large sets due to the way how it is sampled and aggreagate in python. 
+                    </p>
+
+                    <h2 style="color: #667eea; margin: 2rem 0 1rem 0;">Datetime[ns] vs Datetime[us]</h2>
+                    <p style="margin-bottom: 1.5rem;">
+                        When using pandas and polars you run into this odd issue of datetime precision which causes the fourier series to get wonky when using the 
+                        datetime[ns] format. If I was to take a polars frame and covert it to pandas it would fail when I then pass that df into prophet for that reason. Why not
+                        just allow both to be used? This is something that I had to dig into the source code of prophet to figure out and it was not well documented anywhere.
+                    </p>
+                    
+                    <h2 style="color: #667eea; margin: 2rem 0 1rem 0;">Weights</h2>
+                    <p style="margin-bottom: 1.5rem;">
+                        I wanted to be able to weight certain values to allow more flexibility when I had irregular series with values occupying similar time periods.
+                    </p>
+
+                    <h2 style="color: #667eea; margin: 2rem 0 1rem 0;">Making it backwards compatible</h2>
+                    <p style="margin-bottom: 1.5rem;">
+                        Making sure I could make it an easy swap, it had to interact in the same way prophet does with dataframes. This means i need to make tests for compatability which led me 
+                        to understand how much pandas ops are done in the previous implementation. I personally don't like how much of the code is in the forecaster.py file in the prophet repo. 
+                        I feel like it is also lacking unit tests for something that is used so widely in the field.
+                    </p>
+                    
+                    <h2 style="color: #667eea; margin: 2rem 0 1rem 0;">Performance Comparisons</h2>
+                    <p style="margin-bottom: 1.5rem;">
+                        Check out ryanbieber.github.io/farseer for benchmarks and performance metrics comparing Rust vs Python implementation.
+                    </p>
+                    
+                    <h2 style="color: #667eea; margin: 2rem 0 1rem 0;">Challenges Faced</h2>
+                    <p style="margin-bottom: 1.5rem;">
+                        One of the biggest challenges was just getting the Stan models to compile and work correctly with Rust's FFI. I tried a few different 
+                        ways to get them to work without stan but it is much slower and the LBGFS converges unlike the optimization in stan. So, until we 
+                        can get reverse differencing in stable rust, we are stuck with stan for now. Most of it was straightforward and Mr. Claude was big help as I am a rust newbie.
+                        Also the cargo type checking is much stricter that python so getting things to compile was a bit of a pain at times.
+                    </p>
+                    
+                    <h2 style="color: #667eea; margin: 2rem 0 1rem 0;">Conclusion</h2>
+                    <p style="margin-bottom: 1.5rem;">
+                        My main goal is to make this a viable alternative to prophet in python for production systems that need the speed and flexibility that Rust provides.
+                        Most of my work is done in the prediciton side so if precomputation is your bread and butter and inference is all you need, this is the package for you.
+                        I also welcome PRs and contributions to help make this better.
+                    </p>
+                </div>
+                
+                <div style="border-top: 1px solid #e0e0e0; padding-top: 2rem; margin-top: 3rem;">
+                    <p style="text-align: center;">
+                        <a href="../blog.html" class="btn btn-secondary">← Back to Blog</a>
+                    </p>
+                </div>
+            </article>
+        </div>
+        
+        <footer>
+            <p>&copy; 2025 Ryan Bieber. Built with passion for AI and data science.</p>
+        </footer>
+    </div>
+</body>
+</html>

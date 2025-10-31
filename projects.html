@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Ryan Bieber</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="projects.html" class="active">Projects</a></li>
+                <li><a href="blog.html">Blog</a></li>
+            </ul>
+        </nav>
+        
+        <header>
+            <h1>Projects & Work</h1>
+            <p class="subtitle">Open source contributions, production systems, and side projects</p>
+        </header>
+        
+        <div class="content">
+            <section id="featured-projects">
+                <h2>Featured Projects</h2>
+                
+                <div class="project-grid">
+                    <div class="project">
+                        <h3>Farseer</h3>
+                        <div class="project-type">Open Source • Production System</div>
+                        <p class="project-description">
+                            High-performance time-series forecasting library written in Rust. A reimplementation of Facebook Prophet 
+                            optimized for production workloads. Currently running in production for mission-critical decision systems 
+                            handling billions in freight pricing.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Rust</span>
+                            <span class="tech-tag">Time-Series</span>
+                            <span class="tech-tag">Forecasting</span>
+                            <span class="tech-tag">Production ML</span>
+                        </div>
+                        <a href="https://ryanbieber.github.io/farseer" target="_blank">View Project →</a>
+                    </div>
+                    
+                    <div class="project">
+                        <h3>Cigarstradamus</h3>
+                        <div class="project-type">Personal Project • Live Application</div>
+                        <p class="project-description">
+                            Lightweight NLP recommendation engine using Gemma 270M and cosine similarity for personalized product 
+                            matching. Demonstrates efficient deployment of small language models for specialized domains.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">NLP</span>
+                            <span class="tech-tag">Gemma</span>
+                            <span class="tech-tag">Recommendation Systems</span>
+                        </div>
+                        <a href="https://cigarstradamus.com" target="_blank">View Live Site →</a>
+                    </div>
+                    
+                    <div class="project">
+                        <h3>Enterprise Agentic AI Platform</h3>
+                        <div class="project-type">Production System • C.H. Robinson</div>
+                        <p class="project-description">
+                            Built enterprise-scale agentic AI platform using LangGraph/LangSmith that processes $80B+ in annual 
+                            freight bids. Automatically extracts and processes information from PDFs, emails, and Excel files. 
+                            Reduced turnaround time by 40 hours and freed up 20 FTEs.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">LangGraph</span>
+                            <span class="tech-tag">LangSmith</span>
+                            <span class="tech-tag">RAG</span>
+                            <span class="tech-tag">Multi-Agent</span>
+                            <span class="tech-tag">Kubernetes</span>
+                        </div>
+                    </div>
+                    
+                    <div class="project">
+                        <h3>MCP Server Infrastructure</h3>
+                        <div class="project-type">Production System • C.H. Robinson</div>
+                        <p class="project-description">
+                            Created Model Context Protocol (MCP) server infrastructure enabling agent systems to pull real-time 
+                            costing guidance and deliver consistent decision support to commercial representatives. Integrates 
+                            with existing data warehouses and pricing engines.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">MCP</span>
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Snowflake</span>
+                            <span class="tech-tag">GCP</span>
+                        </div>
+                    </div>
+                    
+                    <div class="project">
+                        <h3>Conversational Analytics Agents</h3>
+                        <div class="project-type">Production System • C.H. Robinson</div>
+                        <p class="project-description">
+                            Deployed conversational AI agents that provide on-demand pricing intelligence and recommendations. 
+                            Enables business users to query complex data warehouses using natural language and receive 
+                            context-aware insights.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">LLMs</span>
+                            <span class="tech-tag">Conversational AI</span>
+                            <span class="tech-tag">Analytics</span>
+                            <span class="tech-tag">NLP</span>
+                        </div>
+                    </div>
+                    
+                    <div class="project">
+                        <h3>IBM Automation Platform</h3>
+                        <div class="project-type">Production System • IBM</div>
+                        <p class="project-description">
+                            Built webhook-based automation platform that captured real-time events and automated task management 
+                            across IBM Finance departments. Resulted in time savings equivalent to over 50 FTE. Integrated with 
+                            Trello, Slack, and internal IBM systems.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Webhooks</span>
+                            <span class="tech-tag">Automation</span>
+                            <span class="tech-tag">REST APIs</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="github-repos">
+                <h2>GitHub Repositories</h2>
+                <p style="color: #666; margin-bottom: 1.5rem;">
+                    Check out my <a href="https://github.com/ryanbieber" target="_blank" style="color: #667eea; font-weight: 600;">GitHub profile</a> 
+                    for more open source work and experiments.
+                </p>
+                
+                <div class="project-grid">
+                    <div class="project">
+                        <h3>ryanbieber/farseer</h3>
+                        <div class="project-type">Public Repository</div>
+                        <p class="project-description">
+                            High-performance time-series forecasting library in Rust
+                        </p>
+                        <a href="https://github.com/ryanbieber/farseer" target="_blank">View on GitHub →</a>
+                    </div>
+                    
+                    <!-- Add more GitHub repos here as needed -->
+                </div>
+            </section>
+            
+            <section id="technologies">
+                <h2>Technologies & Tools</h2>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h3>Agentic AI</h3>
+                        <p>Production experience deploying multi-agent systems, RAG pipelines, and conversational AI at enterprise scale</p>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Cloud & Infrastructure</h3>
+                        <p>GCP, AWS, Kubernetes, Helm, Docker - building and maintaining production ML systems</p>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Languages</h3>
+                        <p>Python, Rust, R, SQL - choosing the right tool for performance, maintainability, and team expertise</p>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Data Engineering</h3>
+                        <p>Snowflake, modern data warehouses, building scalable data pipelines for ML systems</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+        
+        <footer>
+            <p>&copy; 2025 Ryan Bieber. Built with passion for AI and data science.</p>
+        </footer>
+    </div>
+</body>
+</html>

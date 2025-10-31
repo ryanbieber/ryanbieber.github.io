@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume - Ryan Bieber</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="resume.html" class="active">Resume</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="blog.html">Blog</a></li>
+            </ul>
+        </nav>
+        
+        <header>
+            <h1>RYAN BIEBER</h1>
+            <p class="subtitle">Lead Data Scientist | Agentic AI, Predictive Analytics & Decision Intelligence</p>
+            <div class="links">
+                <a href="https://linkedin.com/in/ryan-bieber" target="_blank">LinkedIn</a>
+                <a href="https://github.com/ryanbieber" target="_blank">GitHub</a>
+            </div>
+        </header>
+        
+        <div class="content">
+            <section id="summary">
+                <h2>Summary</h2>
+                <p class="summary">
+                    Lead Data Scientist with 6+ years building agentic AI systems and decision intelligence platforms. 
+                    Specialize in deploying production-scale solutions using LangGraph, RAG, and LLMs that have automated 
+                    $80B+ in business processes and freed 70+ FTEs. Track record of turning complex AI into practical tools 
+                    that drive ROI. Strong in cloud deployments (GCP, AWS), Kubernetes, and production ML systems.
+                </p>
+            </section>
+            
+            <section id="experience">
+                <h2>Experience</h2>
+                
+                <div class="job">
+                    <div class="job-header">
+                        <div>
+                            <div class="company">C.H. ROBINSON</div>
+                            <div class="location">Eden Prairie, MN</div>
+                        </div>
+                    </div>
+                    
+                    <div class="position">Lead Data Scientist</div>
+                    <div class="date">March 2025 - Present</div>
+                    
+                    <div class="job-section">
+                        <h4>Agentic AI & Autonomous Decision Systems</h4>
+                        <ul>
+                            <li>Built enterprise agentic AI platform using LangGraph/LangSmith that automatically generates pricing bids from unstructured sources (PDFs, emails, Excel files), handling $80B+ in annual freight bids. Cut turnaround time by 40 hours and freed up 20 FTEs</li>
+                            <li>Created MCP server infrastructure that lets agent systems pull costing guidance and deliver consistent, real-time decision support to commercial reps</li>
+                            <li>Deployed conversational analytics agents that give business users on-demand pricing intelligence and recommendations</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="job-section">
+                        <h4>Production ML & Decision Intelligence</h4>
+                        <ul>
+                            <li>Built and deployed costing engines for all transactional and contractual freight—the backbone of our pricing strategy</li>
+                            <li>Rewrote critical time-series library (farseer) in Rust for better performance in production forecasting pipelines</li>
+                            <li>Developed predictive models and NLP systems for demand forecasting, route optimization, and customer behavior analysis</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="job-section">
+                        <h4>Cloud Infrastructure & MLOps</h4>
+                        <ul>
+                            <li>Deployed and maintained AI systems in Kubernetes using Helm, troubleshot OOM errors and connection issues with k8s/k9s</li>
+                            <li>Built AI governance frameworks around "trust but verify" to handle model overconfidence in business-critical systems</li>
+                            <li>Set up CI/CD pipelines for model deployment, monitoring, and observability</li>
+                        </ul>
+                    </div>
+                    
+                    <div style="margin-top: 1.5rem;">
+                        <div class="position">Senior Data Scientist</div>
+                        <div class="date">June 2022 - May 2025</div>
+                    </div>
+                    
+                    <div style="margin-top: 1rem;">
+                        <div class="position">Data Scientist</div>
+                        <div class="date">March 2021 - July 2022</div>
+                    </div>
+                </div>
+                
+                <div class="job">
+                    <div class="job-header">
+                        <div>
+                            <div class="company">IBM</div>
+                            <div class="location">Rochester, MN</div>
+                        </div>
+                    </div>
+                    <div class="position">Data Scientist</div>
+                    <div class="date">July 2019 - February 2021</div>
+                    <ul>
+                        <li>Built automation platform using webhooks that captured real-time events and automated task management across IBM Finance departments, saving 50+ FTE equivalents</li>
+                        <li>Developed time-series forecasting package in R and mentored junior data scientists</li>
+                    </ul>
+                </div>
+                
+                <div class="job">
+                    <div class="job-header">
+                        <div>
+                            <div class="company">MAYO CLINIC</div>
+                            <div class="location">Rochester, MN</div>
+                        </div>
+                    </div>
+                    <div class="position">Undergraduate Research Fellow</div>
+                    <div class="date">May 2015 - August 2015</div>
+                    <ul>
+                        <li>Worked with imaging group on Magnetic Resonance Elastography research</li>
+                        <li>Conducted MATLAB modeling to evaluate heart stiffness, presented findings at biomedical engineering poster session</li>
+                    </ul>
+                </div>
+            </section>
+            
+            <section id="projects">
+                <h2>Projects</h2>
+                <div class="job" style="border-bottom: none; padding-bottom: 1rem;">
+                    <div class="position">Cigarstradamus - Lightweight NLP Recommendation Engine | Personal Project</div>
+                    <ul>
+                        <li>Built recommendation system using Gemma 270M and cosine similarity for personalized product matching</li>
+                        <li>Live at cigarstradamus.com</li>
+                    </ul>
+                </div>
+                <div class="job" style="border-bottom: none; padding-bottom: 1rem;">
+                    <div class="position">Farseer - High-Performance Time-Series Library | Open Source</div>
+                    <ul>
+                        <li>Rewrote Facebook Prophet in Rust for better performance in production forecasting</li>
+                        <li>Running in production for mission-critical decision systems</li>
+                        <li>Available at ryanbieber.github.io/farseer</li>
+                    </ul>
+                </div>
+            </section>
+            
+            <section id="skills">
+                <h2>Skills</h2>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h3>Agentic AI & LLMs:</h3>
+                        <p>LangGraph, LangSmith, LangChain, RAG, MCP Servers, Multi-agent systems, Conversational AI</p>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Programming & Data:</h3>
+                        <p>Python, SQL, R, Rust, Statistical modeling, Time-series analysis</p>
+                    </div>
+                    <div class="skill-category">
+                        <h3>ML/AI:</h3>
+                        <p>NLP, Predictive analytics, Causal inference, Reinforcement learning, Generative AI</p>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Cloud & Infrastructure:</h3>
+                        <p>GCP, AWS, Azure, Kubernetes (k8s/k9s), Helm, Docker, MLOps</p>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Data Platforms:</h3>
+                        <p>Snowflake, Modern data warehouses, Analytics engineering</p>
+                    </div>
+                    <div class="skill-category">
+                        <h3>AI Governance:</h3>
+                        <p>Model validation, AI observability, Responsible AI deployment</p>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="education">
+                <h2>Education</h2>
+                <div class="education-item">
+                    <div class="degree">Master of Science in Applied Economics | GPA: 4.0</div>
+                    <div class="school">University of North Dakota | 2017-2019</div>
+                </div>
+                <div class="education-item">
+                    <div class="degree">Bachelor of Arts in Economics | GPA: 3.65</div>
+                    <div class="school">University of North Dakota | 2014-2017</div>
+                </div>
+            </section>
+        </div>
+        
+        <footer>
+            <p>&copy; 2025 Ryan Bieber. Built with passion for AI and data science.</p>
+        </footer>
+    </div>
+</body>
+</html>

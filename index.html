@@ -3,171 +3,158 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Professional Resume</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            line-height: 1.6;
-        }
-        section {
-            margin-bottom: 30px;
-            padding: 15px;
-            border-bottom: 2px solid #eee;
-        }
-        h1 {
-            color: #2c3e50;
-            text-align: center;
-        }
-        h2 {
-            color: #34495e;
-            border-bottom: 2px solid #3498db;
-            padding-bottom: 5px;
-        }
-        .job-title {
-            font-weight: bold;
-            color: #2980b9;
-        }
-        .date {
-            color: #7f8c8d;
-            font-style: italic;
-        }
-        .project {
-            background: #f7f9fc;
-            padding: 10px;
-            margin: 10px 0;
-            border-radius: 5px;
-        }
-        .education-logo {
-            width: 50px;
-            height: 50px;
-            margin-right: 15px;
-            vertical-align: middle;
-        }
-        .education-entry {
-            margin-bottom: 20px;
-        }
-        .grade {
-            color: #27ae60;
-            font-weight: bold;
-        }
-        .company-section {
-            margin-bottom: 25px;
-        }
-        .role {
-            margin-left: 20px;
-            margin-bottom: 15px;
-        }
-        .location {
-            color: #7f8c8d;
-            font-size: 0.9em;
-        }
-    </style>
+    <title>Ryan Bieber - Lead Data Scientist | Agentic AI & Decision Intelligence</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Ryan Bieber</h1>
-    
-    <section id="summary">
-        <h2>Professional Summary</h2>
-        <p>Expert problem solver. My passion is figuring out why things are broken, how to be more efficient, and how to make products people will use.
-          I have a strong background in product development, engineering, and data science. 
-        </p>
-    </section>
-
-    <section id="employment">
-        <h2>Employment History</h2>
+    <div class="container">
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="blog.html">Blog</a></li>
+            </ul>
+        </nav>
         
-        <div class="company-section">
-            <p class="job-title">C.H. Robinson</p>
-            <p class="date">Full-time · 4 yrs 3 mos</p>
-            <p class="location">Eden Prairie, Minnesota, United States</p>
-
-            <div class="role">
-                <p class="job-title">Lead Data Scientist</p>
-                <p class="date">Mar 2025 - Present · 3 mos</p>
+        <div class="hero">
+            <h1>Ryan Bieber</h1>
+            <p>Lead Data Scientist building production agentic AI systems</p>
+            <div class="cta-buttons">
+                <a href="resume.html" class="btn btn-primary">View Resume</a>
+                <a href="projects.html" class="btn btn-secondary">See Projects</a>
             </div>
+        </div>
+        
+        <div class="content">
+            <section id="about">
+                <h2>About Me</h2>
+                <p class="summary">
+                    I build AI systems that actually work in production. Over the past 6+ years, I've deployed agentic AI platforms 
+                    that automated $80B+ in business processes, built Rust-based ML infrastructure for mission-critical forecasting, 
+                    and created conversational AI agents that give business users real decision-making power.
+                </p>
+                <p class="summary" style="margin-top: 1rem;">
+                    My focus is on turning complex AI research into practical tools that drive ROI. Whether it's LangGraph multi-agent 
+                    systems, RAG pipelines processing unstructured data, or MCP servers delivering real-time intelligence, I specialize 
+                    in the hard work of making AI production-ready.
+                </p>
+            </section>
             
-            <div class="role">
-                <p class="job-title">Senior Data Scientist</p>
-                <p class="date">Jun 2022 - May 2025 · 3 yrs</p>
-            </div>
+            <section id="highlights">
+                <h2>What I Do</h2>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h3>🤖 Agentic AI Systems</h3>
+                        <p>Design and deploy multi-agent platforms using LangGraph, LangSmith, and RAG. Built enterprise systems 
+                        handling $80B+ in annual business processes with 20+ FTEs freed.</p>
+                    </div>
+                    <div class="skill-category">
+                        <h3>⚡ Production ML</h3>
+                        <p>Deploy ML systems on Kubernetes that actually scale. Rewrote critical forecasting libraries in Rust for 
+                        10x performance improvements in production pipelines.</p>
+                    </div>
+                    <div class="skill-category">
+                        <h3>💬 Conversational AI</h3>
+                        <p>Build conversational analytics agents that let business users query complex data warehouses in natural 
+                        language and get context-aware insights.</p>
+                    </div>
+                    <div class="skill-category">
+                        <h3>🔧 MLOps & Infrastructure</h3>
+                        <p>Set up CI/CD pipelines, Kubernetes deployments, and observability frameworks for production AI systems 
+                        on GCP and AWS.</p>
+                    </div>
+                    <div class="skill-category">
+                        <h3>🎯 Decision Intelligence</h3>
+                        <p>Build costing engines, pricing algorithms, and predictive models that form the backbone of business 
+                        strategy and drive real ROI.</p>
+                    </div>
+                    <div class="skill-category">
+                        <h3>📊 AI Governance</h3>
+                        <p>Create "trust but verify" frameworks for production AI, handling model validation, observability, 
+                        and responsible deployment of business-critical systems.</p>
+                    </div>
+                </div>
+            </section>
             
-            <div class="role">
-                <p class="job-title">Data Scientist</p>
-                <p class="date">Mar 2021 - Jul 2022 · 1 yr 5 mos</p>
-            </div>
+            <section id="featured-work">
+                <h2>Featured Work</h2>
+                <div class="project-grid">
+                    <div class="project">
+                        <h3>Enterprise Agentic AI Platform</h3>
+                        <div class="project-type">Production System @ C.H. Robinson</div>
+                        <p class="project-description">
+                            LangGraph-based platform that automatically processes $80B+ in freight bids from PDFs, emails, and Excel. 
+                            Reduced turnaround by 40 hours, freed 20 FTEs.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">LangGraph</span>
+                            <span class="tech-tag">RAG</span>
+                            <span class="tech-tag">Multi-Agent</span>
+                            <span class="tech-tag">Kubernetes</span>
+                        </div>
+                    </div>
+                    
+                    <div class="project">
+                        <h3>Farseer</h3>
+                        <div class="project-type">Open Source Project</div>
+                        <p class="project-description">
+                            High-performance time-series forecasting library in Rust. Prophet reimplementation running in production 
+                            for mission-critical decision systems.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Rust</span>
+                            <span class="tech-tag">Time-Series</span>
+                            <span class="tech-tag">Production ML</span>
+                        </div>
+                        <a href="https://ryanbieber.github.io/farseer" target="_blank">View Project →</a>
+                    </div>
+                    
+                    <div class="project">
+                        <h3>MCP Server Infrastructure</h3>
+                        <div class="project-type">Production System @ C.H. Robinson</div>
+                        <p class="project-description">
+                            Model Context Protocol servers enabling agents to pull real-time costing guidance and deliver consistent 
+                            decision support to commercial teams.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">MCP</span>
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Snowflake</span>
+                            <span class="tech-tag">GCP</span>
+                        </div>
+                    </div>
+                </div>
+                <p style="text-align: center; margin-top: 2rem;">
+                    <a href="projects.html" class="btn btn-secondary">View All Projects</a>
+                </p>
+            </section>
+            
+            <section id="recent-posts">
+                <h2>Recent Blog Posts</h2>
+                
+                <p style="text-align: center; color: #888; padding: 2rem 0;">
+                    No blog posts yet. Check back soon!
+                </p>
+                
+                <p style="text-align: center; margin-top: 2rem;">
+                    <a href="blog.html" class="btn btn-secondary">View Blog</a>
+                </p>
+            </section>
+            
+            <section id="connect">
+                <h2>Let's Connect</h2>
+                <p class="summary" style="text-align: center;">
+                    Interested in agentic AI, production ML systems, or building AI that drives real business value? 
+                    Let's connect on <a href="https://linkedin.com/in/ryan-bieber" target="_blank" style="color: #667eea; font-weight: 600;">LinkedIn</a> 
+                    or check out my code on <a href="https://github.com/ryanbieber" target="_blank" style="color: #667eea; font-weight: 600;">GitHub</a>.
+                </p>
+            </section>
         </div>
-
-        <div class="company-section">
-            <p class="job-title">Data Scientist - IBM</p>
-            <p class="date">Jul 2019 - Feb 2021 · 1 yr 8 mos</p>
-            <p class="location">Rochester, Minnesota, United States</p>
-            <ul>
-                <li>Developed and managed a time-series package in R specialized for automating the backtesting of financial forecasts</li>
-                <li>Constructed a webhook application to capture real-time events from Trello boards, resulting in time savings equivalent to over 50 FTE</li>
-                <li>Mentored junior data scientists, teaching Python, R, and time-series techniques</li>
-            </ul>
-        </div>
-
-        <div class="company-section">
-            <p class="job-title">Graduate Assistant - University of North Dakota</p>
-            <p class="date">Aug 2017 - Jul 2019 · 2 yrs</p>
-            <p class="location">Grand Forks, North Dakota, United States</p>
-            <ul>
-                <li>Provided tutoring support in Economics courses including Macro/Microeconomics, International Economics, and Econometrics</li>
-                <li>Engaged in data cleaning tasks to enhance data accessibility and usability for professors</li>
-            </ul>
-        </div>
-
-        <div class="company-section">
-            <p class="job-title">Consultant Internship - Infotech</p>
-            <p class="date">May 2018 - Aug 2018 · 4 mos</p>
-            <p class="location">Gainesville, Florida, United States</p>
-            <ul>
-                <li>Conducted data analysis on class action lawsuits to identify collusion and antitrust violations</li>
-                <li>Assisted expert witnesses in preparing testimony for depositions</li>
-                <li>Received letter of recommendation from CEO</li>
-            </ul>
-        </div>
-
-        <div class="company-section">
-            <p class="job-title">Undergraduate Research Fellow - Mayo Clinic</p>
-            <p class="date">May 2015 - Aug 2015 · 4 mos</p>
-            <p class="location">Rochester, Minnesota, United States</p>
-            <ul>
-                <li>Collaborated with imaging group on Magnetic Resonance Elastography (MRE) projects</li>
-                <li>Conducted Thin Plate Modeling in MATLAB using Lamb waves for heart wall simulation</li>
-                <li>Presented research findings at Biomedical Engineering college poster session</li>
-            </ul>
-        </div>
-    </section>
-
-    <section id="education">
-        <h2>Education</h2>
-        <div class="education-entry">
-            <p class="job-title">Master of Science - MS, Applied Economics</p>
-            <p>University of North Dakota</p>
-            <p class="date">2017 - 2019</p>
-            <p class="grade">Grade: 4.0</p>
-        </div>
-
-        <div class="education-entry">
-            <p class="job-title">Bachelor of Arts & Science - BS Mathematics, BA Economics</p>
-            <p>University of North Dakota</p>
-            <p class="date">2014 - 2017</p>
-            <p class="grade">Grade: 3.65</p>
-            <p>Activities and societies: Society of Physics Students</p>
-        </div>
-
-
-        <div class="education-entry">
-            <p class="job-title">Associate of Arts and Sciences - AAS, Liberal Arts and Sciences/Liberal Studies</p>
-            <p>Rochester Community and Technical College</p>
-            <p class="date">2011 - 2013</p>
-        </div>
-    </section>
-
+        
+        <footer>
+            <p>&copy; 2025 Ryan Bieber. Built with passion for AI and data science.</p>
+        </footer>
+    </div>
 </body>
 </html>
