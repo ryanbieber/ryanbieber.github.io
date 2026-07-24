@@ -1,63 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Ryan Bieber's portfolio: production AI, machine learning, projects, resume, and writing.">
     <title>Ryan Bieber | Portfolio</title>
+    <link rel="stylesheet" href="vendor/psone/psone.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <div class="site-ribbon" aria-hidden="true">
-            <span class="label">Signal Online</span>
-            <div class="marquee">
-                <div class="marquee-track">
-                    <span>Ryan Bieber dot com :: selected work, writing, and experiments</span>
-                    <span>Ryan Bieber dot com :: selected work, writing, and experiments</span>
-                </div>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <div class="site-shell">
+        <header class="system-header">
+            <div class="system-bar">
+                <span class="status-label">Portfolio online</span>
+                <span class="system-route">Home // Profile 01</span>
             </div>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="resume.html">Resume</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="blog.html">Blog</a></li>
-            </ul>
-        </nav>
+            <div class="identity">
+                <div class="identity-copy">
+                    <p class="eyebrow">Lead Data Scientist // Production AI</p>
+                    <h1>Ryan Bieber</h1>
+                    <p class="identity-tagline">Selected work, writing, and experiments in reliable AI systems.</p>
+                </div>
+                <div class="signal-orb" aria-hidden="true"><span>RB.01</span></div>
+            </div>
+            <nav class="primary-nav" aria-label="Primary">
+                <ul>
+                    <li><a class="btn" href="index.html" aria-current="page">Home</a></li>
+                    <li><a class="btn" href="resume.html">Resume</a></li>
+                    <li><a class="btn" href="projects.html">Projects</a></li>
+                    <li><a class="btn" href="blog.html">Blog</a></li>
+                </ul>
+            </nav>
+        </header>
 
-        <div class="hero">
-            <div class="hero-badges">
-                <span>Personal Site</span>
-                <span>Production AI</span>
-                <span>Selected Work</span>
-            </div>
-            <h1>Ryan Bieber</h1>
-            <p>Lead Data Scientist building production agentic AI systems with a focus on practical, reliable products</p>
-            <div class="cta-buttons">
-                <a href="resume.html" class="btn btn-primary">View Resume</a>
-                <a href="projects.html" class="btn btn-secondary">See Projects</a>
-            </div>
-            <div class="hero-vibes">
-                <div class="vibe-card">
-                    <strong>Current Focus</strong>
-                    <span>Agentic AI, decision intelligence, and production ML that holds up in real use.</span>
+        <main id="main-content" class="page-stack">
+            <section class="container dialog-panel hero-panel" aria-labelledby="home-intro">
+                <div class="hero-copy">
+                    <p class="eyebrow">Personal site // Production AI // Selected work</p>
+                    <h2 id="home-intro">Building AI systems that hold up in real use.</h2>
+                    <p>Lead Data Scientist building production agentic AI systems with a focus on practical, reliable products</p>
+                    <div class="cta-buttons">
+                        <a href="resume.html" class="btn primary">View Resume</a>
+                        <a href="projects.html" class="btn secondary">See Projects</a>
+                    </div>
                 </div>
-                <div class="vibe-card">
-                    <strong>What’s Here</strong>
-                    <span>Portfolio highlights, projects, resume details, and selected writing.</span>
-                </div>
-                <div class="vibe-card">
-                    <strong>Site Note</strong>
-                    <span>Expressive framing, practical writing, and readable work samples.</span>
-                </div>
-            </div>
-            <p class="hero-note">A personal website with style in the margins, not in the way.</p>
-        </div>
+                <ul class="status-grid">
+                    <li>
+                        <span class="status-index">01</span>
+                        <span><strong>Current Focus</strong>Agentic AI, decision intelligence, and production ML that holds up in real use.</span>
+                    </li>
+                    <li>
+                        <span class="status-index">02</span>
+                        <span><strong>What’s Here</strong>Portfolio highlights, projects, resume details, and selected writing.</span>
+                    </li>
+                    <li>
+                        <span class="status-index">03</span>
+                        <span><strong>Site Note</strong>Expressive framing, practical writing, and readable work samples.</span>
+                    </li>
+                </ul>
+                <p class="section-intro">A personal website with style in the margins, not in the way.</p>
+            </section>
 
-        <div class="content">
-            <section id="about">
-                <h2>About Me</h2>
+            <section class="container dialog-panel" id="about" aria-labelledby="about-title">
+                <h2 class="title" id="about-title">About Me</h2>
                 <p class="summary">
                     I build AI systems and production products that solve real problems. Over the past 6+ years, I've worked across
                     the full spectrum—from designing intelligent agents that automate complex workflows, to developing high-performance
@@ -70,100 +76,97 @@
                 </p>
             </section>
 
-            <section id="highlights">
-                <h2>What I Do</h2>
+            <section class="container dialog-panel dark" id="highlights" aria-labelledby="highlights-title">
+                <h2 class="title" id="highlights-title">What I Do</h2>
                 <div class="skills-grid">
                     <div class="skill-category">
-                        <h3>🤖 Agentic AI Systems</h3>
+                        <h3>Agentic AI Systems</h3>
                         <p>Design and deploy multi-agent platforms using LangGraph, LangSmith, and RAG. Built enterprise systems
                         handling $80B+ in annual business processes with 20+ FTEs freed.</p>
                     </div>
                     <div class="skill-category">
-                        <h3>⚡ Production ML</h3>
+                        <h3>Production ML</h3>
                         <p>Deploy ML systems on Kubernetes that actually scale. Rewrote critical forecasting libraries in Rust for
                         10x performance improvements in production pipelines.</p>
                     </div>
                     <div class="skill-category">
-                        <h3>💬 Conversational AI</h3>
+                        <h3>Conversational AI</h3>
                         <p>Build conversational analytics agents that let business users query complex data warehouses in natural
                         language and get context-aware insights.</p>
                     </div>
                     <div class="skill-category">
-                        <h3>🔧 MLOps &amp; Infrastructure</h3>
+                        <h3>MLOps &amp; Infrastructure</h3>
                         <p>Set up CI/CD pipelines, Kubernetes deployments, and observability frameworks for production AI systems
                         on GCP and AWS.</p>
                     </div>
                     <div class="skill-category">
-                        <h3>🎯 Decision Intelligence</h3>
+                        <h3>Decision Intelligence</h3>
                         <p>Build costing engines, pricing algorithms, and predictive models that form the backbone of business
                         strategy and drive real ROI.</p>
                     </div>
                     <div class="skill-category">
-                        <h3>📊 AI Governance</h3>
+                        <h3>AI Governance</h3>
                         <p>Create "trust but verify" frameworks for production AI, handling model validation, observability,
                         and responsible deployment of business-critical systems.</p>
                     </div>
                 </div>
             </section>
 
-            <section id="featured-work">
-                <h2>Featured Work</h2>
+            <section class="container dialog-panel" id="featured-work" aria-labelledby="featured-title">
+                <h2 class="title" id="featured-title">Featured Work</h2>
                 <div class="project-grid">
-
-                    <div class="project">
+                    <article class="project">
                         <h3>Farseer</h3>
                         <div class="project-type">Open Source Project</div>
                         <p class="project-description">
                             High-performance time-series forecasting library in Rust. Prophet reimplementation running in production
                             for mission-critical decision systems.
                         </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Rust</span>
-                            <span class="tech-tag">Time-Series</span>
-                            <span class="tech-tag">Production ML</span>
-                        </div>
-                        <a href="https://ryanbieber.github.io/farseer" target="_blank">View Project →</a>
-                    </div>
-
+                        <ul class="tag-list">
+                            <li class="tech-tag">Rust</li>
+                            <li class="tech-tag">Time-Series</li>
+                            <li class="tech-tag">Production ML</li>
+                        </ul>
+                        <a href="https://ryanbieber.github.io/farseer/" target="_blank" rel="noopener noreferrer">View Project →</a>
+                    </article>
                 </div>
                 <p class="center-cta">
-                    <a href="projects.html" class="btn btn-secondary">View All Projects</a>
+                    <a href="projects.html" class="btn secondary">View All Projects</a>
                 </p>
             </section>
 
-            <section id="recent-posts">
-                <h2>Recent Blog Posts</h2>
-
+            <section class="container dialog-panel dark" id="recent-posts" aria-labelledby="recent-title">
+                <h2 class="title" id="recent-title">Recent Blog Posts</h2>
                 <article class="blog-preview">
                     <h3><a href="blog/prophet-rust-rewrite.html">Rewriting Prophet in Rust: Lessons and Discoveries</a></h3>
                     <div class="blog-meta">October 31, 2025 • 8 min read</div>
-                    <div class="project-tech stack-gap-sm">
-                        <span class="tech-tag">Rust</span>
-                        <span class="tech-tag">Prophet</span>
-                        <span class="tech-tag">Time Series</span>
-                        <span class="tech-tag">Performance</span>
-                    </div>
+                    <ul class="tag-list">
+                        <li class="tech-tag">Rust</li>
+                        <li class="tech-tag">Prophet</li>
+                        <li class="tech-tag">Time Series</li>
+                        <li class="tech-tag">Performance</li>
+                    </ul>
                     <p>Exploring the challenges and interesting discoveries from reimplementing Facebook's Prophet forecasting library in Rust.</p>
-                    <a href="blog/prophet-rust-rewrite.html" class="btn btn-secondary">Read More →</a>
+                    <a href="blog/prophet-rust-rewrite.html" class="btn secondary">Read More →</a>
                 </article>
-
                 <p class="center-cta">
-                    <a href="blog.html" class="btn btn-secondary">View Blog</a>
+                    <a href="blog.html" class="btn secondary">View Blog</a>
                 </p>
             </section>
 
-            <section id="connect">
-                <h2>Let's Connect</h2>
+            <section class="container dialog-panel" id="connect" aria-labelledby="connect-title">
+                <h2 class="title" id="connect-title">Let's Connect</h2>
                 <p class="summary text-center">
                     Interested in agentic AI, production ML systems, or building AI that drives real business value?
-                    Let's connect on <a href="https://linkedin.com/in/ryan-bieber" target="_blank">LinkedIn</a>
-                    or check out my code on <a href="https://github.com/ryanbieber" target="_blank">GitHub</a>.
+                    Let's connect on <a href="https://linkedin.com/in/ryan-bieber" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                    or check out my code on <a href="https://github.com/ryanbieber" target="_blank" rel="noopener noreferrer">GitHub</a>.
                 </p>
             </section>
-        </div>
+        </main>
 
-        <footer>
-            <p>&copy; 2025 Ryan Bieber. Built with passion for AI and data science.</p>
+        <footer class="site-footer">
+            <p>&copy; 2026 Ryan Bieber. Built with passion for AI and data science.</p>
+            <p>System status // Ready</p>
         </footer>
     </div>
 </body>

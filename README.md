@@ -1,79 +1,146 @@
 # Ryan Bieber's Personal Website
 
-A modern, professional portfolio and blog website showcasing my work in Agentic AI, Production ML, and Decision Intelligence.
+A responsive, PS1-era portfolio and blog showcasing work in agentic AI, production ML, and decision intelligence.
 
-## 🌐 Live Site
-Visit: [ryanbieber.github.io](https://ryanbieber.github.io)
+Live site: [ryanbieber.github.io](https://ryanbieber.github.io)
 
-## 📁 Structure
+## Structure
 
-```
+```text
 ryanbieber.github.io/
-├── index.html          # Landing page
-├── resume.html         # Full resume
-├── projects.html       # Project portfolio
-├── blog.html          # Blog listing
-├── styles.css         # Shared styles
-├── blog/              # Blog posts directory
-│   └── building-agentic-ai.html
-└── README.md          # This file
+├── index.html
+├── resume.html
+├── projects.html
+├── projects.js
+├── blog.html
+├── blog/
+│   └── prophet-rust-rewrite.html
+├── styles.css
+├── vendor/
+│   └── psone/
+├── scripts/
+│   ├── test-projects.mjs
+│   └── validate-site.mjs
+├── package.json
+└── README.md
 ```
 
-## ✨ Features
+The site is static HTML, CSS, and JavaScript. The Projects archive is fully present in `projects.html`; JavaScript only adds search and filtering, so the archive remains readable when scripts are unavailable.
 
-- **Multi-page Navigation**: Clean navigation between Home, Resume, Projects, and Blog
-- **Responsive Design**: Mobile-friendly layout that works on all devices
-- **Modern Styling**: Professional gradient headers and card-based layouts
-- **Blog System**: Ready-to-use blog structure with sample posts
-- **Project Showcase**: Highlight GitHub repos and production systems
-- **Fast Loading**: No external dependencies, pure HTML/CSS
+## PSone.css dependency
 
-## 📝 Adding New Content
+[PSone.css](https://github.com/micah5/PSone.css) is vendored at commit [`edc8d352`](https://github.com/micah5/PSone.css/commit/edc8d352c539e3df5f831ffce4958c0cfd5fa4ad) under `vendor/psone/`.
 
-### Adding a Blog Post
+- The original stylesheet, required fonts/assets, source commit marker, and MIT license are stored locally.
+- Remote font and asset references in the upstream stylesheet are rewritten to local paths.
+- Every page loads `vendor/psone/psone.css` before `styles.css`.
+- `styles.css` deliberately overrides PSone.css's global body, paragraph, focus, input, radio, and responsive defaults.
 
-1. Create a new HTML file in the `blog/` directory
-2. Use `blog/building-agentic-ai.html` as a template
-3. Add the post to `blog.html` in the blog posts section
-4. Update the date and content
+PSone.css is copyright its contributors and distributed under the [MIT license](vendor/psone/LICENSE).
 
-### Adding a Project
+## Repository archive rules
 
-Edit `projects.html` and add a new project card in the `.project-grid` section:
+The archive is a manual July 2026 snapshot representing 58 repositories:
 
-```html
-<div class="project">
-    <h3>Project Name</h3>
-    <div class="project-type">Type</div>
-    <p class="project-description">Description...</p>
-    <div class="project-tech">
-        <span class="tech-tag">Tech1</span>
-        <span class="tech-tag">Tech2</span>
-    </div>
-    <a href="link" target="_blank">View Project →</a>
-</div>
+- 33 public repository cards.
+- One anonymous `PRIVATE VAULT // 25 REPOSITORIES` panel representing 25 private repositories.
+
+A public repository qualifies when it is owned by `ryanbieber`, non-empty, and not a fork. The profile repository and this website repository are excluded. Public cards are sorted by `pushed_at`, most recent first.
+
+Descriptions follow this order:
+
+1. Use the GitHub repository description when present.
+2. Otherwise derive one sentence of at most 160 characters from public README or source material.
+3. Use `Public coding experiment` only if the public material does not establish a clear purpose.
+
+Each public card contains only its name, concise description, primary-language label, GitHub link, and an optional project-specific live-site link. Stars, forks, issue counts, and activity statistics are intentionally omitted.
+
+Private repository contents are never inspected. Qualifying private repositories must be owned by `ryanbieber`, non-empty, and not externally owned collaborations. The site exposes no private repository names, URLs, languages, dates, or per-category counts. It uses only four broad, metadata-level summaries:
+
+- Applied ML and forecasting.
+- Automation and productivity tools.
+- Consumer applications.
+- Data and deployment infrastructure.
+
+Cigarstradamus is an intentional exception only as an already public-facing featured project name and summary. Its expired live URL and private repository name/URL are not linked or added to the archive.
+
+No GitHub API or token is used at runtime.
+
+## Maintaining the archive
+
+1. Collect repository metadata outside the site runtime.
+2. Apply the rules above and verify the totals.
+3. Sort qualifying public repositories by `pushed_at` descending.
+4. Update the static cards in `projects.html`. Keep `data-visibility="public"` and `data-count="1"` on each public entry.
+5. Update the private vault's represented total in its title and `data-count` only. Do not add private names or metadata to committed files.
+6. Update the archive intro, initial `aria-live` count, footer count, expected names in `scripts/validate-site.mjs`, and archive tests when totals change.
+7. Run the complete validation suite.
+
+For the private leakage audit, create a temporary file outside the repository containing one excluded private repository name or URL per line. Then run:
+
+```bash
+PRIVATE_REPO_EXCLUSIONS_FILE=/absolute/path/private-repositories.txt \
+STRICT_PRIVACY=1 \
+npm test
 ```
 
-### Updating Resume
+The validator scans generated `.html`, `.css`, and `.js` files. Keep the exclusion file private and never commit it. The approved public-facing Cigarstradamus display name is permitted, but its GitHub URL is still rejected.
 
-Edit `resume.html` to update your experience, skills, or education.
+## Local development and validation
 
-## 🎨 Customization
+Install the pinned validation-only dependencies:
 
-All styles are in `styles.css`. Key color variables:
-- Primary gradient: `#667eea` to `#764ba2`
-- Accent color: `#667eea`
-- Success color: `#27ae60`
+```bash
+npm install
+```
 
-## 🚀 Deployment
+Run the HTML, internal link/resource, archive-count, privacy-ready, accessibility-rule, and control tests:
 
-This site is deployed via GitHub Pages. Any push to the `master` branch will automatically update the live site.
+```bash
+npm test
+```
 
-## 📧 Contact
+Check every unique external target when network access is available:
 
-- LinkedIn: [linkedin.com/in/ryan-bieber](https://linkedin.com/in/ryan-bieber)
-- GitHub: [github.com/ryanbieber](https://github.com/ryanbieber)
+```bash
+npm run validate:external
+```
 
----
+Serve the repository root for browser testing:
+
+```bash
+python3 -m http.server 8000
+```
+
+Then open `http://127.0.0.1:8000/`. Check Home, Resume, Projects, Blog, and the article at desktop and mobile widths, with keyboard navigation, reduced motion, and JavaScript disabled.
+
+While the local server is running, verify every page and referenced stylesheet, script, font, and icon response:
+
+```bash
+npm run validate:local -- http://127.0.0.1:8000/
+```
+
+## Deployment
+
+This user site deploys through GitHub Pages from the `main` branch and repository root (`/`).
+
+In GitHub, the expected Pages configuration is:
+
+- **Source:** Deploy from a branch.
+- **Branch:** `main`.
+- **Folder:** `/ (root)`.
+
+A push to `main` starts the Pages build. Monitor the repository's Pages deployment until it succeeds, then smoke-test:
+
+- `/`
+- `/resume.html`
+- `/projects.html`
+- `/blog.html`
+- `/blog/prophet-rust-rewrite.html`
+
+## Contact
+
+- [LinkedIn](https://linkedin.com/in/ryan-bieber)
+- [GitHub](https://github.com/ryanbieber)
 
 Built with passion for AI and data science.

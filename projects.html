@@ -1,42 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects - Ryan Bieber</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Ryan Bieber's featured work and repository archive across production AI, machine learning, data, and software experiments.">
+    <title>Projects | Ryan Bieber</title>
+    <link rel="stylesheet" href="vendor/psone/psone.css">
     <link rel="stylesheet" href="styles.css">
+    <script src="projects.js" defer></script>
 </head>
 <body>
-    <div class="container">
-        <div class="site-ribbon" aria-hidden="true">
-            <span class="label">Signal Online</span>
-            <div class="marquee">
-                <div class="marquee-track">
-                    <span>Ryan Bieber dot com :: selected work, writing, and experiments</span>
-                    <span>Ryan Bieber dot com :: selected work, writing, and experiments</span>
-                </div>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <div class="site-shell">
+        <header class="system-header">
+            <div class="system-bar">
+                <span class="status-label">Project archive mounted</span>
+                <span class="system-route">Projects // Memory 03</span>
             </div>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="resume.html">Resume</a></li>
-                <li><a href="projects.html" class="active">Projects</a></li>
-                <li><a href="blog.html">Blog</a></li>
-            </ul>
-        </nav>
-
-        <header>
-            <h1>Projects &amp; Work</h1>
-            <p class="subtitle">Open source contributions, production systems, and side projects</p>
+            <div class="identity">
+                <div class="identity-copy">
+                    <p class="eyebrow">Featured work // Public code // Private vault</p>
+                    <h1>Projects &amp; Work</h1>
+                    <p class="identity-tagline">Open source contributions, production systems, and side projects</p>
+                </div>
+                <div class="signal-orb" aria-hidden="true"><span>MEM.03</span></div>
+            </div>
+            <nav class="primary-nav" aria-label="Primary">
+                <ul>
+                    <li><a class="btn" href="index.html">Home</a></li>
+                    <li><a class="btn" href="resume.html">Resume</a></li>
+                    <li><a class="btn" href="projects.html" aria-current="page">Projects</a></li>
+                    <li><a class="btn" href="blog.html">Blog</a></li>
+                </ul>
+            </nav>
         </header>
 
-        <div class="content">
-            <section id="featured-projects">
-                <h2>Featured Projects</h2>
-
+        <main id="main-content" class="page-stack">
+            <section class="container dialog-panel" id="featured-projects" aria-labelledby="featured-projects-title">
+                <h2 class="title" id="featured-projects-title">Featured Projects</h2>
                 <div class="project-grid">
-                    <div class="project">
+                    <article class="project">
                         <h3>Farseer</h3>
                         <div class="project-type">Open Source • Production System</div>
                         <p class="project-description">
@@ -44,32 +47,31 @@
                             optimized for production workloads. Currently running in production for mission-critical decision systems
                             handling billions in freight pricing.
                         </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Rust</span>
-                            <span class="tech-tag">Time-Series</span>
-                            <span class="tech-tag">Forecasting</span>
-                            <span class="tech-tag">Production ML</span>
-                        </div>
-                        <a href="https://ryanbieber.github.io/farseer" target="_blank">View Project →</a>
-                    </div>
+                        <ul class="tag-list">
+                            <li class="tech-tag">Rust</li>
+                            <li class="tech-tag">Time-Series</li>
+                            <li class="tech-tag">Forecasting</li>
+                            <li class="tech-tag">Production ML</li>
+                        </ul>
+                        <a href="https://ryanbieber.github.io/farseer/" target="_blank" rel="noopener noreferrer">View Project →</a>
+                    </article>
 
-                    <div class="project">
+                    <article class="project">
                         <h3>Cigarstradamus</h3>
-                        <div class="project-type">Personal Project • Live Application</div>
+                        <div class="project-type">Personal Project • Recommendation System</div>
                         <p class="project-description">
                             Lightweight NLP recommendation engine using Gemma 270M and cosine similarity for personalized product
                             matching. Demonstrates efficient deployment of small language models for specialized domains.
                         </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">NLP</span>
-                            <span class="tech-tag">Gemma</span>
-                            <span class="tech-tag">Recommendation Systems</span>
-                        </div>
-                        <a href="https://cigarstradamus.com" target="_blank">View Live Site →</a>
-                    </div>
+                        <ul class="tag-list">
+                            <li class="tech-tag">Python</li>
+                            <li class="tech-tag">NLP</li>
+                            <li class="tech-tag">Gemma</li>
+                            <li class="tech-tag">Recommendation Systems</li>
+                        </ul>
+                    </article>
 
-                    <div class="project">
+                    <article class="project">
                         <h3>Enterprise Agentic AI Platform</h3>
                         <div class="project-type">Production System • C.H. Robinson</div>
                         <p class="project-description">
@@ -77,16 +79,16 @@
                             freight bids. Automatically extracts and processes information from PDFs, emails, and Excel files.
                             Reduced turnaround time by 40 hours and freed up 20 FTEs.
                         </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">LangGraph</span>
-                            <span class="tech-tag">LangSmith</span>
-                            <span class="tech-tag">RAG</span>
-                            <span class="tech-tag">Multi-Agent</span>
-                            <span class="tech-tag">Kubernetes</span>
-                        </div>
-                    </div>
+                        <ul class="tag-list">
+                            <li class="tech-tag">LangGraph</li>
+                            <li class="tech-tag">LangSmith</li>
+                            <li class="tech-tag">RAG</li>
+                            <li class="tech-tag">Multi-Agent</li>
+                            <li class="tech-tag">Kubernetes</li>
+                        </ul>
+                    </article>
 
-                    <div class="project">
+                    <article class="project">
                         <h3>MCP Server Infrastructure</h3>
                         <div class="project-type">Production System • C.H. Robinson</div>
                         <p class="project-description">
@@ -94,15 +96,15 @@
                             costing guidance and deliver consistent decision support to commercial representatives. Integrates
                             with existing data warehouses and pricing engines.
                         </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">MCP</span>
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">Snowflake</span>
-                            <span class="tech-tag">GCP</span>
-                        </div>
-                    </div>
+                        <ul class="tag-list">
+                            <li class="tech-tag">MCP</li>
+                            <li class="tech-tag">Python</li>
+                            <li class="tech-tag">Snowflake</li>
+                            <li class="tech-tag">GCP</li>
+                        </ul>
+                    </article>
 
-                    <div class="project">
+                    <article class="project">
                         <h3>Conversational Analytics Agents</h3>
                         <div class="project-type">Production System • C.H. Robinson</div>
                         <p class="project-description">
@@ -110,15 +112,15 @@
                             Enables business users to query complex data warehouses using natural language and receive
                             context-aware insights.
                         </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">LLMs</span>
-                            <span class="tech-tag">Conversational AI</span>
-                            <span class="tech-tag">Analytics</span>
-                            <span class="tech-tag">NLP</span>
-                        </div>
-                    </div>
+                        <ul class="tag-list">
+                            <li class="tech-tag">LLMs</li>
+                            <li class="tech-tag">Conversational AI</li>
+                            <li class="tech-tag">Analytics</li>
+                            <li class="tech-tag">NLP</li>
+                        </ul>
+                    </article>
 
-                    <div class="project">
+                    <article class="project">
                         <h3>IBM Automation Platform</h3>
                         <div class="project-type">Production System • IBM</div>
                         <p class="project-description">
@@ -126,39 +128,491 @@
                             across IBM Finance departments. Resulted in time savings equivalent to over 50 FTE. Integrated with
                             Trello, Slack, and internal IBM systems.
                         </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">Webhooks</span>
-                            <span class="tech-tag">Automation</span>
-                            <span class="tech-tag">REST APIs</span>
-                        </div>
-                    </div>
+                        <ul class="tag-list">
+                            <li class="tech-tag">Python</li>
+                            <li class="tech-tag">Webhooks</li>
+                            <li class="tech-tag">Automation</li>
+                            <li class="tech-tag">REST APIs</li>
+                        </ul>
+                    </article>
                 </div>
             </section>
 
-            <section id="github-repos">
-                <h2>GitHub Repositories</h2>
-                <p class="stack-gap-md">
-                    Check out my <a href="https://github.com/ryanbieber" target="_blank">GitHub profile</a>
+            <section class="container dialog-panel dark" id="repository-archive" aria-labelledby="archive-title">
+                <h2 class="title" id="archive-title">Repository Archive</h2>
+                <p class="section-intro">
+                    A July 2026 snapshot of 33 owned public repositories, followed by one privacy-preserving panel representing
+                    25 qualifying private repositories. Public entries are sorted by most recently pushed.
+                </p>
+                <p class="section-intro">
+                    Check out my <a href="https://github.com/ryanbieber" target="_blank" rel="noopener noreferrer">GitHub profile</a>
                     for more open source work and experiments.
                 </p>
 
-                <div class="project-grid">
-                    <div class="project">
-                        <h3>ryanbieber/farseer</h3>
-                        <div class="project-type">Public Repository</div>
-                        <p class="project-description">
-                            High-performance time-series forecasting library in Rust
-                        </p>
-                        <a href="https://github.com/ryanbieber/farseer" target="_blank">View on GitHub →</a>
+                <form class="archive-controls" data-archive-controls>
+                    <div class="field">
+                        <label for="archive-search">Search archive</label>
+                        <input class="input" id="archive-search" name="archive-search" type="search" placeholder="Name, description, or language" autocomplete="off" data-archive-search>
+                    </div>
+                    <div class="control-buttons">
+                        <button class="btn primary" type="submit">Apply</button>
+                        <button class="btn secondary" type="button" data-clear>Clear</button>
                     </div>
 
-                    <!-- Add more GitHub repos here as needed -->
-                </div>
+                    <fieldset class="filter-group">
+                        <legend>Visibility</legend>
+                        <div class="filter-options">
+                            <label class="radio">
+                                <input type="radio" name="visibility" value="all" checked>
+                                <span class="option"><span class="click" aria-hidden="true"></span>All</span>
+                            </label>
+                            <label class="radio">
+                                <input type="radio" name="visibility" value="public">
+                                <span class="option"><span class="click" aria-hidden="true"></span>Public</span>
+                            </label>
+                            <label class="radio">
+                                <input type="radio" name="visibility" value="private">
+                                <span class="option"><span class="click" aria-hidden="true"></span>Private</span>
+                            </label>
+                        </div>
+                    </fieldset>
+
+                    <div class="control-actions">
+                        <p class="result-count" aria-live="polite" aria-atomic="true" data-result-count>58 represented repositories</p>
+                    </div>
+                </form>
+
+                <noscript>
+                    <p class="noscript-note">Archive controls require JavaScript. All represented projects remain visible below.</p>
+                </noscript>
+
+                <ul class="archive-list" data-archive-list>
+                    <li class="archive-item" data-archive-item data-visibility="public" data-count="1">
+                        <article class="memory-card">
+                            <div class="repo-head">
+                                <span class="language-label">TypeScript</span>
+                                <h3>time-vs-timing</h3>
+                            </div>
+                            <p class="project-description">Compare lump-sum investing and DCA across real SPY history.</p>
+                            <div class="repo-actions">
+                                <a href="https://github.com/ryanbieber/time-vs-timing" target="_blank" rel="noopener noreferrer">GitHub →</a>
+                                <a href="https://ryanbieber.github.io/time-vs-timing/" target="_blank" rel="noopener noreferrer">Live site →</a>
+                            </div>
+                        </article>
+                    </li>
+                    <li class="archive-item" data-archive-item data-visibility="public" data-count="1">
+                        <article class="memory-card">
+                            <div class="repo-head">
+                                <span class="language-label">TypeScript</span>
+                                <h3>libraryofbabel</h3>
+                            </div>
+                            <p class="project-description">An interactive homage to Jorge Luis Borges's The Library of Babel.</p>
+                            <div class="repo-actions">
+                                <a href="https://github.com/ryanbieber/libraryofbabel" target="_blank" rel="noopener noreferrer">GitHub →</a>
+                                <a href="https://ryanbieber.github.io/libraryofbabel/" target="_blank" rel="noopener noreferrer">Live site →</a>
+                            </div>
+                        </article>
+                    </li>
+                    <li class="archive-item" data-archive-item data-visibility="public" data-count="1">
+                        <article class="memory-card">
+                            <div class="repo-head">
+                                <span class="language-label">JavaScript</span>
+                                <h3>strength-coach</h3>
+                            </div>
+                            <p class="project-description">A skill and web interface for turning strength goals, timelines, and equipment into practical coaching recommendations.</p>
+                            <div class="repo-actions">
+                                <a href="https://github.com/ryanbieber/strength-coach" target="_blank" rel="noopener noreferrer">GitHub →</a>
+                                <a href="https://ryanbieber.github.io/strength-coach/" target="_blank" rel="noopener noreferrer">Live site →</a>
+                            </div>
+                        </article>
+                    </li>
+                    <li class="archive-item" data-archive-item data-visibility="public" data-count="1">
+                        <article class="memory-card">
+                            <div class="repo-head">
+                                <span class="language-label">Python</span>
+                                <h3>registry-platform</h3>
+                            </div>
+                            <p class="project-description">H3 map of registered offenders</p>
+                            <div class="repo-actions">
+                                <a href="https://github.com/ryanbieber/registry-platform" target="_blank" rel="noopener noreferrer">GitHub →</a>
+                                <a href="https://ryanbieber.github.io/registry-platform/" target="_blank" rel="noopener noreferrer">Live site →</a>
+                            </div>
+                        </article>
+                    </li>
+                    <li class="archive-item" data-archive-item data-visibility="public" data-count="1">
+                        <article class="memory-card">
+                            <div class="repo-head">
+                                <span class="language-label">JavaScript</span>
+                                <h3>traffic-review</h3>
+                            </div>
+                            <p class="project-description">ATE is a scam</p>
+                            <div class="repo-actions">
+                                <a href="https://github.com/ryanbieber/traffic-review" target="_blank" rel="noopener noreferrer">GitHub →</a>
+                                <a href="https://ryanbieber.github.io/traffic-review/" target="_blank" rel="noopener noreferrer">Live site →</a>
+                            </div>
+                        </article>
+                    </li>
+                    <li class="archive-item" data-archive-item data-visibility="public" data-count="1">
+                        <article class="memory-card">
+                            <div class="repo-head">
+                                <span class="language-label">TypeScript</span>
+                                <h3>just-a-simple-chart-bro</h3>
+                            </div>
+                            <p class="project-description">Simple comparison for when local llms breakeven for cloud</p>
+                            <div class="repo-actions">
+                                <a href="https://github.com/ryanbieber/just-a-simple-chart-bro" target="_blank" rel="noopener noreferrer">GitHub →</a>
+                                <a href="https://ryanbieber.github.io/just-a-simple-chart-bro/" target="_blank" rel="noopener noreferrer">Live site →</a>
+                            </div>
+                        </article>
+                    </li>
+                    <li class="archive-item" data-archive-item data-visibility="public" data-count="1">
+                        <article class="memory-card">
+                            <div class="repo-head">
+                                <span class="language-label">Python</span>
+                                <h3>omnissiah</h3>
+                            </div>
+                            <p class="project-description">Home maintenance tracking app with FastAPI, React, PostgreSQL, multi-agent support, and Telegram notifications.</p>
+                            <div class="repo-actions">
+                                <a href="https://github.com/ryanbieber/omnissiah" target="_blank" rel="noopener noreferrer">GitHub →</a>
+                            </div>
+                        </article>
+                    </li>
+                    <li class="archive-item" data-archive-item data-visibility="public" data-count="1">
+                        <article class="memory-card">
+                            <div class="repo-head">
+                                <span class="language-label">Python</span>
+                                <h3>farseer</h3>
+                            </div>
+                            <p class="project-description">Time-series forecasting in Rust based on prophet</p>
+                            <div class="repo-actions">
+                                <a href="https://github.com/ryanbieber/farseer" target="_blank" rel="noopener noreferrer">GitHub →</a>
+                                <a href="https://ryanbieber.github.io/farseer/" target="_blank" rel="noopener noreferrer">Live site →</a>
+                            </div>
+                        </article>
+                    </li>
+                    <li class="archive-item" data-archive-item data-visibility="public" data-count="1">
+                        <article class="memory-card">
+                            <div class="repo-head">
+                                <span class="language-label">Python</span>
+                                <h3>pokemon_portfoilo</h3>
+                            </div>
+                            <p class="project-description">AI-assisted Pokémon card collection manager with card recognition, market pricing, and portfolio tracking.</p>
+                            <div class="repo-actions">
+                                <a href="https://github.com/ryanbieber/pokemon_portfoilo" target="_blank" rel="noopener noreferrer">GitHub →</a>
+                            </div>
+                        </article>
+                    </li>
+                    <li class="archive-item" data-archive-item data-visibility="public" data-count="1">
+                        <article class="memory-card">
+                            <div class="repo-head">
+                                <span class="language-label">Python</span>
+                                <h3>geostradamus</h3>
+                            </div>
+                            <p class="project-description">Geospatial Time Series</p>
+                            <div class="repo-actions">
+                                <a href="https://github.com/ryanbieber/geostradamus" target="_blank" rel="noopener noreferrer">GitHub →</a>
+                            </div>
+                        </article>
+                    </li>
+                    <li class="archive-item" data-archive-item data-visibility="public" data-count="1">
+                        <article class="memory-card">
+                            <div class="repo-head">
+                                <span class="language-label">Jupyter Notebook</span>
+                                <h3>spatial_mapping</h3>
+                            </div>
+                            <p class="project-description">Explores nearest-neighbor weighting to interpolate low-resolution spatial data.</p>
+                            <div class="repo-actions">
+                                <a href="https://github.com/ryanbieber/spatial_mapping" target="_blank" rel="noopener noreferrer">GitHub →</a>
+                            </div>
+                        </article>
+                    </li>
+                    <li class="archive-item" data-archive-item data-visibility="public" data-count="1">
+                        <article class="memory-card">
+                            <div class="repo-head">
+                                <span class="language-label">Jupyter Notebook</span>
+                                <h3>smart_shopper</h3>
+                            </div>
+                            <p class="project-description">Scrapes local businesses to surface the best coffee deals.</p>
+                            <div class="repo-actions">
+                                <a href="https://github.com/ryanbieber/smart_shopper" target="_blank" rel="noopener noreferrer">GitHub →</a>
+                            </div>
+                        </article>
+                    </li>
+                    <li class="archive-item" data-archive-item data-visibility="public" data-count="1">
+                        <article class="memory-card">
+                            <div class="repo-head">
+                                <span class="language-label">Jupyter Notebook</span>
+                                <h3>butlerbot</h3>
+                            </div>
+                            <p class="project-description">Telegram bot that stores notes and appointments, adds context, and prepares a daily report.</p>
+                            <div class="repo-actions">
+                                <a href="https://github.com/ryanbieber/butlerbot" target="_blank" rel="noopener noreferrer">GitHub →</a>
+                            </div>
+                        </article>
+                    </li>
+                    <li class="archive-item" data-archive-item data-visibility="public" data-count="1">
+                        <article class="memory-card">
+                            <div class="repo-head">
+                                <span class="language-label">Jupyter Notebook</span>
+                                <h3>aoc-2024</h3>
+                            </div>
+                            <p class="project-description">aoc 2024 code</p>
+                            <div class="repo-actions">
+                                <a href="https://github.com/ryanbieber/aoc-2024" target="_blank" rel="noopener noreferrer">GitHub →</a>
+                            </div>
+                        </article>
+                    </li>
+                    <li class="archive-item" data-archive-item data-visibility="public" data-count="1">
+                        <article class="memory-card">
+                            <div class="repo-head">
+                                <span class="language-label">Not specified</span>
+                                <h3>ai_researcher</h3>
+                            </div>
+                            <p class="project-description">multi-agent researcher to do multimodal research on companies</p>
+                            <div class="repo-actions">
+                                <a href="https://github.com/ryanbieber/ai_researcher" target="_blank" rel="noopener noreferrer">GitHub →</a>
+                            </div>
+                        </article>
+                    </li>
+                    <li class="archive-item" data-archive-item data-visibility="public" data-count="1">
+                        <article class="memory-card">
+                            <div class="repo-head">
+                                <span class="language-label">Not specified</span>
+                                <h3>what_the_bill</h3>
+                            </div>
+                            <p class="project-description">I dont have time to read the bills the house passes, lets have an AI do it.</p>
+                            <div class="repo-actions">
+                                <a href="https://github.com/ryanbieber/what_the_bill" target="_blank" rel="noopener noreferrer">GitHub →</a>
+                            </div>
+                        </article>
+                    </li>
+                    <li class="archive-item" data-archive-item data-visibility="public" data-count="1">
+                        <article class="memory-card">
+                            <div class="repo-head">
+                                <span class="language-label">Python</span>
+                                <h3>rocket_sim</h3>
+                            </div>
+                            <p class="project-description">Interactive rocket simulation served as a lightweight local web app.</p>
+                            <div class="repo-actions">
+                                <a href="https://github.com/ryanbieber/rocket_sim" target="_blank" rel="noopener noreferrer">GitHub →</a>
+                            </div>
+                        </article>
+                    </li>
+                    <li class="archive-item" data-archive-item data-visibility="public" data-count="1">
+                        <article class="memory-card">
+                            <div class="repo-head">
+                                <span class="language-label">Makefile</span>
+                                <h3>plex_media_server</h3>
+                            </div>
+                            <p class="project-description">Plex Server</p>
+                            <div class="repo-actions">
+                                <a href="https://github.com/ryanbieber/plex_media_server" target="_blank" rel="noopener noreferrer">GitHub →</a>
+                            </div>
+                        </article>
+                    </li>
+                    <li class="archive-item" data-archive-item data-visibility="public" data-count="1">
+                        <article class="memory-card">
+                            <div class="repo-head">
+                                <span class="language-label">Not specified</span>
+                                <h3>home_automation</h3>
+                            </div>
+                            <p class="project-description">One repo to rule all of them home things</p>
+                            <div class="repo-actions">
+                                <a href="https://github.com/ryanbieber/home_automation" target="_blank" rel="noopener noreferrer">GitHub →</a>
+                            </div>
+                        </article>
+                    </li>
+                    <li class="archive-item" data-archive-item data-visibility="public" data-count="1">
+                        <article class="memory-card">
+                            <div class="repo-head">
+                                <span class="language-label">R</span>
+                                <h3>autobsts</h3>
+                            </div>
+                            <p class="project-description">Repo for the autobsts package</p>
+                            <div class="repo-actions">
+                                <a href="https://github.com/ryanbieber/autobsts" target="_blank" rel="noopener noreferrer">GitHub →</a>
+                            </div>
+                        </article>
+                    </li>
+                    <li class="archive-item" data-archive-item data-visibility="public" data-count="1">
+                        <article class="memory-card">
+                            <div class="repo-head">
+                                <span class="language-label">R</span>
+                                <h3>model-deployment-kubernetes</h3>
+                            </div>
+                            <p class="project-description">Repo contains a working example of container orchestration in kubernetes to utilize seperate containers for pulling data, modelling data, and pushing data out.</p>
+                            <div class="repo-actions">
+                                <a href="https://github.com/ryanbieber/model-deployment-kubernetes" target="_blank" rel="noopener noreferrer">GitHub →</a>
+                            </div>
+                        </article>
+                    </li>
+                    <li class="archive-item" data-archive-item data-visibility="public" data-count="1">
+                        <article class="memory-card">
+                            <div class="repo-head">
+                                <span class="language-label">R</span>
+                                <h3>SIR-model</h3>
+                            </div>
+                            <p class="project-description">System of ODE's for epidemic modelling put into a R-shiny Dashboard</p>
+                            <div class="repo-actions">
+                                <a href="https://github.com/ryanbieber/SIR-model" target="_blank" rel="noopener noreferrer">GitHub →</a>
+                            </div>
+                        </article>
+                    </li>
+                    <li class="archive-item" data-archive-item data-visibility="public" data-count="1">
+                        <article class="memory-card">
+                            <div class="repo-head">
+                                <span class="language-label">R</span>
+                                <h3>chicago-crime-predicitons</h3>
+                            </div>
+                            <p class="project-description">Explores Chicago crime arrest prediction with caret and SparklyR workflows.</p>
+                            <div class="repo-actions">
+                                <a href="https://github.com/ryanbieber/chicago-crime-predicitons" target="_blank" rel="noopener noreferrer">GitHub →</a>
+                            </div>
+                        </article>
+                    </li>
+                    <li class="archive-item" data-archive-item data-visibility="public" data-count="1">
+                        <article class="memory-card">
+                            <div class="repo-head">
+                                <span class="language-label">Dockerfile</span>
+                                <h3>Example-Docker-Repo</h3>
+                            </div>
+                            <p class="project-description">Template Repo for R projects using docker</p>
+                            <div class="repo-actions">
+                                <a href="https://github.com/ryanbieber/Example-Docker-Repo" target="_blank" rel="noopener noreferrer">GitHub →</a>
+                            </div>
+                        </article>
+                    </li>
+                    <li class="archive-item" data-archive-item data-visibility="public" data-count="1">
+                        <article class="memory-card">
+                            <div class="repo-head">
+                                <span class="language-label">Not specified</span>
+                                <h3>Wow-Gold-Token-Machine</h3>
+                            </div>
+                            <p class="project-description">Containerized model-build template for packaging R workflows for scheduled jobs, APIs, or cloud deployment.</p>
+                            <div class="repo-actions">
+                                <a href="https://github.com/ryanbieber/Wow-Gold-Token-Machine" target="_blank" rel="noopener noreferrer">GitHub →</a>
+                            </div>
+                        </article>
+                    </li>
+                    <li class="archive-item" data-archive-item data-visibility="public" data-count="1">
+                        <article class="memory-card">
+                            <div class="repo-head">
+                                <span class="language-label">R</span>
+                                <h3>Time-Series-Catch-All</h3>
+                            </div>
+                            <p class="project-description">Time Series Package in R to automate forecasting</p>
+                            <div class="repo-actions">
+                                <a href="https://github.com/ryanbieber/Time-Series-Catch-All" target="_blank" rel="noopener noreferrer">GitHub →</a>
+                            </div>
+                        </article>
+                    </li>
+                    <li class="archive-item" data-archive-item data-visibility="public" data-count="1">
+                        <article class="memory-card">
+                            <div class="repo-head">
+                                <span class="language-label">R</span>
+                                <h3>Weightlifting</h3>
+                            </div>
+                            <p class="project-description">Explores logistic models for predicting weightlifting medal outcomes from weight class and country.</p>
+                            <div class="repo-actions">
+                                <a href="https://github.com/ryanbieber/Weightlifting" target="_blank" rel="noopener noreferrer">GitHub →</a>
+                            </div>
+                        </article>
+                    </li>
+                    <li class="archive-item" data-archive-item data-visibility="public" data-count="1">
+                        <article class="memory-card">
+                            <div class="repo-head">
+                                <span class="language-label">Not specified</span>
+                                <h3>Death-Penalty</h3>
+                            </div>
+                            <p class="project-description">Looking at the death Penalty</p>
+                            <div class="repo-actions">
+                                <a href="https://github.com/ryanbieber/Death-Penalty" target="_blank" rel="noopener noreferrer">GitHub →</a>
+                            </div>
+                        </article>
+                    </li>
+                    <li class="archive-item" data-archive-item data-visibility="public" data-count="1">
+                        <article class="memory-card">
+                            <div class="repo-head">
+                                <span class="language-label">R</span>
+                                <h3>BMR</h3>
+                            </div>
+                            <p class="project-description">shiny app to look at bmr and how long it takes for people to lose weight</p>
+                            <div class="repo-actions">
+                                <a href="https://github.com/ryanbieber/BMR" target="_blank" rel="noopener noreferrer">GitHub →</a>
+                            </div>
+                        </article>
+                    </li>
+                    <li class="archive-item" data-archive-item data-visibility="public" data-count="1">
+                        <article class="memory-card">
+                            <div class="repo-head">
+                                <span class="language-label">Dockerfile</span>
+                                <h3>deploying-plumber-ibm-cloud</h3>
+                            </div>
+                            <p class="project-description">Showing you how to deploy a plumber api on kubernetes in ibm cloud</p>
+                            <div class="repo-actions">
+                                <a href="https://github.com/ryanbieber/deploying-plumber-ibm-cloud" target="_blank" rel="noopener noreferrer">GitHub →</a>
+                            </div>
+                        </article>
+                    </li>
+                    <li class="archive-item" data-archive-item data-visibility="public" data-count="1">
+                        <article class="memory-card">
+                            <div class="repo-head">
+                                <span class="language-label">R</span>
+                                <h3>NLP</h3>
+                            </div>
+                            <p class="project-description">Messing around with Text Analytics in Twitter</p>
+                            <div class="repo-actions">
+                                <a href="https://github.com/ryanbieber/NLP" target="_blank" rel="noopener noreferrer">GitHub →</a>
+                            </div>
+                        </article>
+                    </li>
+                    <li class="archive-item" data-archive-item data-visibility="public" data-count="1">
+                        <article class="memory-card">
+                            <div class="repo-head">
+                                <span class="language-label">R</span>
+                                <h3>FazolisIsGod</h3>
+                            </div>
+                            <p class="project-description">Find your distance relative to Fazoils</p>
+                            <div class="repo-actions">
+                                <a href="https://github.com/ryanbieber/FazolisIsGod" target="_blank" rel="noopener noreferrer">GitHub →</a>
+                                <a href="https://ryanbieber.shinyapps.io/Distance_to_Fazolis/" target="_blank" rel="noopener noreferrer">Live site →</a>
+                            </div>
+                        </article>
+                    </li>
+                    <li class="archive-item" data-archive-item data-visibility="public" data-count="1">
+                        <article class="memory-card">
+                            <div class="repo-head">
+                                <span class="language-label">R</span>
+                                <h3>Wow-Gold</h3>
+                            </div>
+                            <p class="project-description">R project on looking at world of warcraft gold prices</p>
+                            <div class="repo-actions">
+                                <a href="https://github.com/ryanbieber/Wow-Gold" target="_blank" rel="noopener noreferrer">GitHub →</a>
+                            </div>
+                        </article>
+                    </li>
+
+                    <li class="archive-item vault-card" data-archive-item data-visibility="private" data-count="25">
+                        <article class="memory-card">
+                            <div class="vault-heading">
+                                <span class="icon vault-lock" aria-hidden="true"></span>
+                                <h3>Private Vault // 25 Repositories</h3>
+                            </div>
+                            <ul class="vault-summaries">
+                                <li>Applied ML and forecasting</li>
+                                <li>Automation and productivity tools</li>
+                                <li>Consumer applications</li>
+                                <li>Data and deployment infrastructure</li>
+                            </ul>
+                        </article>
+                    </li>
+                </ul>
+
+                <p class="empty-state" hidden data-empty-state>No represented projects match this search.</p>
             </section>
 
-            <section id="technologies">
-                <h2>Technologies &amp; Tools</h2>
+            <section class="container dialog-panel" id="technologies" aria-labelledby="technologies-title">
+                <h2 class="title" id="technologies-title">Technologies &amp; Tools</h2>
                 <div class="skills-grid">
                     <div class="skill-category">
                         <h3>Agentic AI</h3>
@@ -178,10 +632,11 @@
                     </div>
                 </div>
             </section>
-        </div>
+        </main>
 
-        <footer>
-            <p>&copy; 2025 Ryan Bieber. Built with passion for AI and data science.</p>
+        <footer class="site-footer">
+            <p>&copy; 2026 Ryan Bieber. Built with passion for AI and data science.</p>
+            <p>Archive status // 58 represented</p>
         </footer>
     </div>
 </body>

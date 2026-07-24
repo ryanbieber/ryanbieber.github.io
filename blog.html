@@ -1,71 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog - Ryan Bieber</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Writing from Ryan Bieber about AI, engineering, and building production systems.">
+    <title>Blog | Ryan Bieber</title>
+    <link rel="stylesheet" href="vendor/psone/psone.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <div class="site-ribbon" aria-hidden="true">
-            <span class="label">Signal Online</span>
-            <div class="marquee">
-                <div class="marquee-track">
-                    <span>Ryan Bieber dot com :: selected work, writing, and experiments</span>
-                    <span>Ryan Bieber dot com :: selected work, writing, and experiments</span>
-                </div>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <div class="site-shell">
+        <header class="system-header">
+            <div class="system-bar">
+                <span class="status-label">Journal index loaded</span>
+                <span class="system-route">Blog // Archive 04</span>
             </div>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="resume.html">Resume</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="blog.html" class="active">Blog</a></li>
-            </ul>
-        </nav>
-
-        <header>
-            <h1>Blog</h1>
-            <p class="subtitle">Thoughts on AI, engineering, and building production systems</p>
+            <div class="identity">
+                <div class="identity-copy">
+                    <p class="eyebrow">Notes // Engineering // Production systems</p>
+                    <h1>Blog</h1>
+                    <p class="identity-tagline">Thoughts on AI, engineering, and building production systems</p>
+                </div>
+                <div class="signal-orb" aria-hidden="true"><span>LOG.04</span></div>
+            </div>
+            <nav class="primary-nav" aria-label="Primary">
+                <ul>
+                    <li><a class="btn" href="index.html">Home</a></li>
+                    <li><a class="btn" href="resume.html">Resume</a></li>
+                    <li><a class="btn" href="projects.html">Projects</a></li>
+                    <li><a class="btn" href="blog.html" aria-current="page">Blog</a></li>
+                </ul>
+            </nav>
         </header>
 
-        <div class="content">
-            <section id="blog-posts">
+        <main id="main-content" class="page-stack">
+            <section class="container dialog-panel" id="blog-posts" aria-labelledby="blog-posts-title">
+                <h2 class="title" id="blog-posts-title">Journal Entries</h2>
                 <article class="blog-preview">
-                    <h2><a href="blog/prophet-rust-rewrite.html">Rewriting Prophet in Rust: Lessons and Discoveries</a></h2>
+                    <h3><a href="blog/prophet-rust-rewrite.html">Rewriting Prophet in Rust: Lessons and Discoveries</a></h3>
                     <div class="blog-meta">October 31, 2025 • 8 min read</div>
-                    <div class="project-tech">
-                        <span class="tech-tag">Rust</span>
-                        <span class="tech-tag">Prophet</span>
-                        <span class="tech-tag">Time Series</span>
-                        <span class="tech-tag">Performance</span>
-                    </div>
+                    <ul class="tag-list">
+                        <li class="tech-tag">Rust</li>
+                        <li class="tech-tag">Prophet</li>
+                        <li class="tech-tag">Time Series</li>
+                        <li class="tech-tag">Performance</li>
+                    </ul>
                     <p>Exploring the challenges and interesting discoveries from reimplementing Facebook's Prophet forecasting library in Rust.</p>
-                    <a href="blog/prophet-rust-rewrite.html" class="btn btn-secondary">Read More →</a>
+                    <a href="blog/prophet-rust-rewrite.html" class="btn secondary">Read More →</a>
                 </article>
             </section>
 
-            <section id="topics">
-                <h2>Topics</h2>
-                <div class="project-tech">
-                    <span class="tech-tag">Agentic AI</span>
-                    <span class="tech-tag">LangGraph</span>
-                    <span class="tech-tag">RAG</span>
-                    <span class="tech-tag">MCP</span>
-                    <span class="tech-tag">Rust</span>
-                    <span class="tech-tag">Kubernetes</span>
-                    <span class="tech-tag">MLOps</span>
-                    <span class="tech-tag">Production ML</span>
-                    <span class="tech-tag">Time-Series</span>
-                    <span class="tech-tag">Decision Intelligence</span>
-                </div>
+            <section class="container dialog-panel dark" id="topics" aria-labelledby="topics-title">
+                <h2 class="title" id="topics-title">Topics</h2>
+                <ul class="tag-list">
+                    <li class="tech-tag">Agentic AI</li>
+                    <li class="tech-tag">LangGraph</li>
+                    <li class="tech-tag">RAG</li>
+                    <li class="tech-tag">MCP</li>
+                    <li class="tech-tag">Rust</li>
+                    <li class="tech-tag">Kubernetes</li>
+                    <li class="tech-tag">MLOps</li>
+                    <li class="tech-tag">Production ML</li>
+                    <li class="tech-tag">Time-Series</li>
+                    <li class="tech-tag">Decision Intelligence</li>
+                </ul>
             </section>
-        </div>
+        </main>
 
-        <footer>
-            <p>&copy; 2025 Ryan Bieber. Built with passion for AI and data science.</p>
+        <footer class="site-footer">
+            <p>&copy; 2026 Ryan Bieber. Built with passion for AI and data science.</p>
+            <p>Journal archive // 1 entry</p>
         </footer>
     </div>
 </body>
