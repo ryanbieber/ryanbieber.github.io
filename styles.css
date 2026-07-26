@@ -117,7 +117,12 @@ button {
     background: var(--cyan);
 }
 
-*:focus {
+:focus {
+    outline: 2px solid var(--ink-soft);
+    outline-offset: 3px;
+}
+
+:focus:not(:focus-visible) {
     outline: 0;
 }
 
@@ -225,6 +230,18 @@ button {
     gap: 1.25rem;
     align-items: center;
     padding: clamp(1.25rem, 4vw, 2.4rem);
+}
+
+.portfolio-header .identity {
+    padding: clamp(0.85rem, 2vw, 1.2rem) clamp(1.1rem, 3vw, 2rem);
+}
+
+.portfolio-header .identity h1 {
+    font-size: clamp(2rem, 4.5vw, 3.2rem);
+}
+
+.portfolio-header .identity-tagline {
+    margin-top: 0.45rem;
 }
 
 .identity-copy {
@@ -478,7 +495,7 @@ button {
     grid-template-columns: minmax(0, 1.35fr) minmax(15rem, 0.65fr);
     gap: clamp(1.5rem, 5vw, 3.5rem);
     align-items: center;
-    min-height: 24rem;
+    min-height: 18rem;
 }
 
 .hero-copy h2 {
@@ -491,6 +508,10 @@ button {
     letter-spacing: 0.04em;
     line-height: 1.14;
     text-shadow: 0.12rem 0.12rem 0 #010319;
+}
+
+.hero-panel .hero-copy h2 {
+    font-size: clamp(1.5rem, 3.5vw, 2.8rem);
 }
 
 .hero-copy > p {
@@ -547,11 +568,45 @@ button {
     text-transform: uppercase;
 }
 
-.status-grid span:last-child {
+.status-copy,
+.status-copy > span {
     display: block;
     color: var(--muted);
     font-size: 0.92rem;
     line-height: 1.45;
+}
+
+.home-feature-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.8rem;
+}
+
+.portfolio-card {
+    position: relative;
+    padding-top: 1.2rem;
+    border-top-color: rgba(98, 232, 255, 0.7);
+}
+
+.portfolio-card h3 {
+    font-size: 1.04rem;
+}
+
+.portfolio-outcome {
+    padding: 0.7rem;
+    border-left: 0.2rem solid var(--amber);
+    color: var(--ink-soft);
+    background: rgba(0, 2, 29, 0.38);
+    font-size: 0.92rem;
+    line-height: 1.5;
+}
+
+.portfolio-outcome strong {
+    color: var(--amber);
+    font-family: var(--display-font);
+    font-size: 0.68rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
 }
 
 .skills-grid,
@@ -760,6 +815,93 @@ button {
 .blog-preview h2 a,
 .blog-preview h3 a {
     color: inherit;
+}
+
+.activity-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.7rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.activity-entry {
+    position: relative;
+    min-width: 0;
+    padding: 0.9rem 1rem 0.9rem 1.2rem;
+    border: 1px solid rgba(211, 222, 255, 0.3);
+    background:
+        linear-gradient(135deg, rgba(9, 25, 101, 0.55), rgba(0, 2, 29, 0.72)),
+        var(--panel-bottom);
+}
+
+.activity-entry::before {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 0.25rem;
+    content: "";
+    background: linear-gradient(var(--cyan), rgba(98, 232, 255, 0.08));
+}
+
+.activity-head {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 0.4rem 1rem;
+    align-items: baseline;
+}
+
+.activity-repo,
+.activity-head time,
+.commit-sha,
+.activity-note {
+    font-family: var(--display-font);
+    font-size: 0.66rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    line-height: 1.45;
+    text-transform: uppercase;
+}
+
+.activity-repo {
+    max-width: 100%;
+    color: var(--cyan);
+    overflow-wrap: anywhere;
+}
+
+.activity-head time {
+    color: var(--muted);
+}
+
+.activity-entry h3 {
+    margin: 0.5rem 0 0.7rem;
+    color: #fff;
+    font-family: var(--display-font);
+    font-size: 0.86rem;
+    font-weight: 400;
+    letter-spacing: 0.04em;
+    line-height: 1.45;
+    overflow-wrap: anywhere;
+}
+
+.activity-entry h3 a {
+    color: inherit;
+}
+
+.commit-sha {
+    display: inline-flex;
+    padding: 0.18rem 0.42rem;
+    border: 1px solid rgba(216, 226, 255, 0.28);
+    color: var(--amber);
+    background: rgba(0, 2, 29, 0.5);
+}
+
+.activity-note {
+    margin: 1rem 0 0;
+    color: var(--muted);
 }
 
 .post-header-panel {
@@ -1167,11 +1309,15 @@ input[type="radio"]:checked + .option > .click {
     }
 
     .status-grid {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
     }
 
     .status-grid li {
         grid-template-columns: 1fr;
+    }
+
+    .home-feature-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
     .archive-controls {
@@ -1208,6 +1354,8 @@ input[type="radio"]:checked + .option > .click {
     .skills-grid,
     .project-grid,
     .card-grid,
+    .home-feature-grid,
+    .activity-list,
     .archive-list,
     .vault-summaries {
         grid-template-columns: 1fr;
@@ -1327,6 +1475,7 @@ input[type="radio"]:checked + .option > .click {
     .container.dialog-panel,
     .system-header,
     .memory-card,
+    .activity-entry,
     .skill-category,
     .project,
     .blog-preview,
@@ -1337,7 +1486,8 @@ input[type="radio"]:checked + .option > .click {
 
     .status-label::before,
     .memory-card::after,
-    .memory-card::before {
+    .memory-card::before,
+    .activity-entry::before {
         forced-color-adjust: none;
     }
 }
@@ -1370,7 +1520,8 @@ input[type="radio"]:checked + .option > .click {
     .job,
     .education-item,
     .skill-category,
-    .project {
+    .project,
+    .activity-entry {
         color: #111;
         background: #fff;
         border-color: #777;
@@ -1388,7 +1539,8 @@ input[type="radio"]:checked + .option > .click {
     .degree,
     .skill-category h3,
     .project h3,
-    .menu-card h3 {
+    .menu-card h3,
+    .activity-entry h3 {
         color: #111;
         text-shadow: none;
     }

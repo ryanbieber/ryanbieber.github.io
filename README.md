@@ -66,6 +66,22 @@ Cigarstradamus is an intentional exception only as an already public-facing feat
 
 No GitHub API or token is used at runtime.
 
+## Recent public activity
+
+The homepage includes a static, public-only snapshot of eight recent commits. This shows ongoing work without making visitors' browsers call GitHub or exposing a token.
+
+Activity entries must:
+
+- Come from an owned, public, non-empty, non-fork repository.
+- Exclude the profile and website repositories.
+- Use commits from the repository's default branch.
+- Have GitHub's commit `author.login` set to `ryanbieber`.
+- Exclude merge commits, bots, deployment triggers, Pages synchronization, and low-signal maintenance.
+- Be sorted by committed timestamp descending, with no more than three entries per repository.
+- Include the repository, first-line subject, absolute `<time datetime>`, seven-character display SHA, and canonical full-SHA commit URL.
+
+Refresh the snapshot monthly or after a meaningful public release. Update the eight `data-activity-item` entries and the visible snapshot date in `index.html`, then run the full validation suite. Commit messages are untrusted input and must be HTML-escaped before being added.
+
 ## Maintaining the archive
 
 1. Collect repository metadata outside the site runtime.
@@ -112,7 +128,7 @@ Serve the repository root for browser testing:
 python3 -m http.server 8000
 ```
 
-Then open `http://127.0.0.1:8000/`. Check Home, Resume, Projects, Blog, and the article at desktop and mobile widths, with keyboard navigation, reduced motion, and JavaScript disabled.
+Then open `http://127.0.0.1:8000/`. Check Portfolio, Resume, Projects, Blog, and the article at desktop and mobile widths, with keyboard navigation, reduced motion, and JavaScript disabled.
 
 While the local server is running, verify every page and referenced stylesheet, script, font, and icon response:
 

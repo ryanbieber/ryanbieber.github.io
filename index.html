@@ -11,22 +11,22 @@
 <body>
     <a class="skip-link" href="#main-content">Skip to content</a>
     <div class="site-shell">
-        <header class="system-header">
+        <header class="system-header portfolio-header">
             <div class="system-bar">
-                <span class="status-label">Portfolio online</span>
-                <span class="system-route">Home // Profile 01</span>
+                <span class="status-label">Portfolio index ready</span>
+                <span class="system-route">Portfolio // Index 01</span>
             </div>
             <div class="identity">
                 <div class="identity-copy">
                     <p class="eyebrow">Lead Data Scientist // Production AI</p>
                     <h1>Ryan Bieber</h1>
-                    <p class="identity-tagline">Selected work, writing, and experiments in reliable AI systems.</p>
+                    <p class="identity-tagline">Selected systems, public code, and recent shipping activity.</p>
                 </div>
                 <div class="signal-orb" aria-hidden="true"><span>RB.01</span></div>
             </div>
             <nav class="primary-nav" aria-label="Primary">
                 <ul>
-                    <li><a class="btn" href="index.html" aria-current="page">Home</a></li>
+                    <li><a class="btn" href="index.html" aria-current="page">Portfolio</a></li>
                     <li><a class="btn" href="resume.html">Resume</a></li>
                     <li><a class="btn" href="projects.html">Projects</a></li>
                     <li><a class="btn" href="blog.html">Blog</a></li>
@@ -37,32 +37,192 @@
         <main id="main-content" class="page-stack">
             <section class="container dialog-panel hero-panel" aria-labelledby="home-intro">
                 <div class="hero-copy">
-                    <p class="eyebrow">Personal site // Production AI // Selected work</p>
-                    <h2 id="home-intro">Building AI systems that hold up in real use.</h2>
+                    <p class="eyebrow">Portfolio index // Shipped systems // Public work</p>
+                    <h2 id="home-intro">Production AI systems and public work that ships.</h2>
                     <p>Lead Data Scientist building production agentic AI systems with a focus on practical, reliable products</p>
                     <div class="cta-buttons">
-                        <a href="resume.html" class="btn primary">View Resume</a>
-                        <a href="projects.html" class="btn secondary">See Projects</a>
+                        <a href="#featured-work" class="btn primary">Explore Selected Work</a>
+                        <a href="projects.html" class="btn secondary">Browse Project Archive</a>
                     </div>
                 </div>
                 <ul class="status-grid">
                     <li>
                         <span class="status-index">01</span>
-                        <span><strong>Current Focus</strong>Agentic AI, decision intelligence, and production ML that holds up in real use.</span>
+                        <span class="status-copy">
+                            <strong>Production impact:</strong>
+                            <span>$80B+ annual workflows supported by deployed AI systems.</span>
+                        </span>
                     </li>
                     <li>
                         <span class="status-index">02</span>
-                        <span><strong>What’s Here</strong>Portfolio highlights, projects, resume details, and selected writing.</span>
+                        <span class="status-copy">
+                            <strong>Public portfolio:</strong>
+                            <span>33 owned repositories, curated case studies, and live builds.</span>
+                        </span>
                     </li>
                     <li>
                         <span class="status-index">03</span>
-                        <span><strong>Site Note</strong>Expressive framing, practical writing, and readable work samples.</span>
+                        <span class="status-copy">
+                            <strong>Current signal:</strong>
+                            <span>Recent public commits through July 23, 2026.</span>
+                        </span>
                     </li>
                 </ul>
-                <p class="section-intro">A personal website with style in the margins, not in the way.</p>
             </section>
 
-            <section class="container dialog-panel" id="about" aria-labelledby="about-title">
+            <section class="container dialog-panel dark" id="featured-work" aria-labelledby="featured-title">
+                <h2 class="title" id="featured-title">Selected Portfolio</h2>
+                <p class="section-intro">A mix of production systems and public builds, selected for impact, technical depth, and inspectable results.</p>
+                <div class="home-feature-grid">
+                    <article class="project portfolio-card">
+                        <div class="project-type">Production System • Enterprise AI</div>
+                        <h3>Agentic AI Platform</h3>
+                        <p class="project-description">
+                            Enterprise-scale LangGraph and LangSmith platform that turns PDFs, emails, and spreadsheets into pricing bids
+                            across $80B+ in annual freight workflows.
+                        </p>
+                        <p class="portfolio-outcome"><strong>Outcome:</strong> Cut turnaround time by 40 hours and freed 20 FTEs.</p>
+                        <ul class="tag-list">
+                            <li class="tech-tag">LangGraph</li>
+                            <li class="tech-tag">RAG</li>
+                            <li class="tech-tag">Multi-Agent</li>
+                            <li class="tech-tag">Kubernetes</li>
+                        </ul>
+                    </article>
+
+                    <article class="project portfolio-card">
+                        <div class="project-type">Open Source • Production ML</div>
+                        <h3>Farseer</h3>
+                        <p class="project-description">
+                            High-performance time-series forecasting library written in Rust. A Prophet reimplementation running in
+                            production for mission-critical decision systems.
+                        </p>
+                        <p class="portfolio-outcome"><strong>Outcome:</strong> Predictions run 15–20× faster than the Python implementation.</p>
+                        <ul class="tag-list">
+                            <li class="tech-tag">Rust</li>
+                            <li class="tech-tag">Time-Series</li>
+                            <li class="tech-tag">Production ML</li>
+                        </ul>
+                        <div class="repo-actions">
+                            <a href="https://ryanbieber.github.io/farseer/" target="_blank" rel="noopener noreferrer">View Farseer</a>
+                            <a href="https://github.com/ryanbieber/farseer" target="_blank" rel="noopener noreferrer">Farseer Source</a>
+                        </div>
+                    </article>
+
+                    <article class="project portfolio-card">
+                        <div class="project-type">Public Build • Interactive Data</div>
+                        <h3>Time vs. Timing</h3>
+                        <p class="project-description">
+                            Interactive TypeScript project for comparing lump-sum investing and dollar-cost averaging across real SPY history.
+                        </p>
+                        <p class="portfolio-outcome"><strong>Focus:</strong> Break-even distributions, recovery stress tests, and clear decision framing.</p>
+                        <ul class="tag-list">
+                            <li class="tech-tag">TypeScript</li>
+                            <li class="tech-tag">Data Visualization</li>
+                            <li class="tech-tag">Simulation</li>
+                        </ul>
+                        <div class="repo-actions">
+                            <a href="https://ryanbieber.github.io/time-vs-timing/" target="_blank" rel="noopener noreferrer">View Time vs. Timing</a>
+                            <a href="https://github.com/ryanbieber/time-vs-timing" target="_blank" rel="noopener noreferrer">Time vs. Timing Source</a>
+                        </div>
+                    </article>
+                </div>
+                <p class="center-cta">
+                    <a href="projects.html" class="btn secondary">Explore 58 Represented Repositories</a>
+                </p>
+            </section>
+
+            <section class="container dialog-panel" id="recent-activity" aria-labelledby="activity-title">
+                <h2 class="title" id="activity-title">Recent Public Commits</h2>
+                <p class="section-intro">
+                    A public-only snapshot of meaningful work across recently active projects. Updated July 26, 2026.
+                </p>
+                <ol class="activity-list">
+                    <li class="activity-entry" data-activity-item data-repository="time-vs-timing" data-commit="8806622078412c26a810f021e47eaf16759824d1">
+                        <article>
+                            <div class="activity-head">
+                                <a class="activity-repo" href="https://github.com/ryanbieber/time-vs-timing" target="_blank" rel="noopener noreferrer">time-vs-timing</a>
+                                <time datetime="2026-07-23T23:14:48Z">Jul 23, 2026</time>
+                            </div>
+                            <h3><a href="https://github.com/ryanbieber/time-vs-timing/commit/8806622078412c26a810f021e47eaf16759824d1" target="_blank" rel="noopener noreferrer">Add break-even distributions (#5)</a></h3>
+                            <code class="commit-sha">8806622</code>
+                        </article>
+                    </li>
+                    <li class="activity-entry" data-activity-item data-repository="time-vs-timing" data-commit="286455e83e85aa2539e49621cda09d78670978e4">
+                        <article>
+                            <div class="activity-head">
+                                <a class="activity-repo" href="https://github.com/ryanbieber/time-vs-timing" target="_blank" rel="noopener noreferrer">time-vs-timing</a>
+                                <time datetime="2026-07-23T20:51:29Z">Jul 23, 2026</time>
+                            </div>
+                            <h3><a href="https://github.com/ryanbieber/time-vs-timing/commit/286455e83e85aa2539e49621cda09d78670978e4" target="_blank" rel="noopener noreferrer">Add break-even recovery stress test (#4)</a></h3>
+                            <code class="commit-sha">286455e</code>
+                        </article>
+                    </li>
+                    <li class="activity-entry" data-activity-item data-repository="libraryofbabel" data-commit="def73c0dc50532ec0a2c26463394f2d3502c823e">
+                        <article>
+                            <div class="activity-head">
+                                <a class="activity-repo" href="https://github.com/ryanbieber/libraryofbabel" target="_blank" rel="noopener noreferrer">libraryofbabel</a>
+                                <time datetime="2026-07-18T17:00:20Z">Jul 18, 2026</time>
+                            </div>
+                            <h3><a href="https://github.com/ryanbieber/libraryofbabel/commit/def73c0dc50532ec0a2c26463394f2d3502c823e" target="_blank" rel="noopener noreferrer">Rework the central lightwell railing (#36)</a></h3>
+                            <code class="commit-sha">def73c0</code>
+                        </article>
+                    </li>
+                    <li class="activity-entry" data-activity-item data-repository="libraryofbabel" data-commit="5b130aa36f88a17caa67c5de91af04166301fff4">
+                        <article>
+                            <div class="activity-head">
+                                <a class="activity-repo" href="https://github.com/ryanbieber/libraryofbabel" target="_blank" rel="noopener noreferrer">libraryofbabel</a>
+                                <time datetime="2026-07-18T03:37:51Z">Jul 18, 2026</time>
+                            </div>
+                            <h3><a href="https://github.com/ryanbieber/libraryofbabel/commit/5b130aa36f88a17caa67c5de91af04166301fff4" target="_blank" rel="noopener noreferrer">Make spiral stair entrances walkable (#35)</a></h3>
+                            <code class="commit-sha">5b130aa</code>
+                        </article>
+                    </li>
+                    <li class="activity-entry" data-activity-item data-repository="libraryofbabel" data-commit="d0acc97e8ab4bec942e9db1ba6557f311b4ceec6">
+                        <article>
+                            <div class="activity-head">
+                                <a class="activity-repo" href="https://github.com/ryanbieber/libraryofbabel" target="_blank" rel="noopener noreferrer">libraryofbabel</a>
+                                <time datetime="2026-07-17T19:24:14Z">Jul 17, 2026</time>
+                            </div>
+                            <h3><a href="https://github.com/ryanbieber/libraryofbabel/commit/d0acc97e8ab4bec942e9db1ba6557f311b4ceec6" target="_blank" rel="noopener noreferrer">Add deterministic wandering gallery NPCs (#34)</a></h3>
+                            <code class="commit-sha">d0acc97</code>
+                        </article>
+                    </li>
+                    <li class="activity-entry" data-activity-item data-repository="just-a-simple-chart-bro" data-commit="3a43a15a9241a9582a437fe3cf72dd4f8fe63fe1">
+                        <article>
+                            <div class="activity-head">
+                                <a class="activity-repo" href="https://github.com/ryanbieber/just-a-simple-chart-bro" target="_blank" rel="noopener noreferrer">just-a-simple-chart-bro</a>
+                                <time datetime="2026-07-04T00:17:25Z">Jul 4, 2026</time>
+                            </div>
+                            <h3><a href="https://github.com/ryanbieber/just-a-simple-chart-bro/commit/3a43a15a9241a9582a437fe3cf72dd4f8fe63fe1" target="_blank" rel="noopener noreferrer">Simplify benchmark cost chart</a></h3>
+                            <code class="commit-sha">3a43a15</code>
+                        </article>
+                    </li>
+                    <li class="activity-entry" data-activity-item data-repository="traffic-review" data-commit="68a29eec732ea86bf8790f976344ad013755486b">
+                        <article>
+                            <div class="activity-head">
+                                <a class="activity-repo" href="https://github.com/ryanbieber/traffic-review" target="_blank" rel="noopener noreferrer">traffic-review</a>
+                                <time datetime="2026-07-01T02:39:13Z">Jul 1, 2026</time>
+                            </div>
+                            <h3><a href="https://github.com/ryanbieber/traffic-review/commit/68a29eec732ea86bf8790f976344ad013755486b" target="_blank" rel="noopener noreferrer">Apply Miami Vice theme</a></h3>
+                            <code class="commit-sha">68a29ee</code>
+                        </article>
+                    </li>
+                    <li class="activity-entry" data-activity-item data-repository="traffic-review" data-commit="5d999a36e69f0cd4a54356f032fda78223694fc9">
+                        <article>
+                            <div class="activity-head">
+                                <a class="activity-repo" href="https://github.com/ryanbieber/traffic-review" target="_blank" rel="noopener noreferrer">traffic-review</a>
+                                <time datetime="2026-06-30T14:42:43Z">Jun 30, 2026</time>
+                            </div>
+                            <h3><a href="https://github.com/ryanbieber/traffic-review/commit/5d999a36e69f0cd4a54356f032fda78223694fc9" target="_blank" rel="noopener noreferrer">Expose speed trust reasons</a></h3>
+                            <code class="commit-sha">5d999a3</code>
+                        </article>
+                    </li>
+                </ol>
+                <p class="activity-note">Public repositories only // Authored commits // Static snapshot</p>
+            </section>
+
+            <section class="container dialog-panel dark" id="about" aria-labelledby="about-title">
                 <h2 class="title" id="about-title">About Me</h2>
                 <p class="summary">
                     I build AI systems and production products that solve real problems. Over the past 6+ years, I've worked across
@@ -76,8 +236,8 @@
                 </p>
             </section>
 
-            <section class="container dialog-panel dark" id="highlights" aria-labelledby="highlights-title">
-                <h2 class="title" id="highlights-title">What I Do</h2>
+            <section class="container dialog-panel" id="highlights" aria-labelledby="highlights-title">
+                <h2 class="title" id="highlights-title">Capabilities Behind the Work</h2>
                 <div class="skills-grid">
                     <div class="skill-category">
                         <h3>Agentic AI Systems</h3>
@@ -112,34 +272,11 @@
                 </div>
             </section>
 
-            <section class="container dialog-panel" id="featured-work" aria-labelledby="featured-title">
-                <h2 class="title" id="featured-title">Featured Work</h2>
-                <div class="project-grid">
-                    <article class="project">
-                        <h3>Farseer</h3>
-                        <div class="project-type">Open Source Project</div>
-                        <p class="project-description">
-                            High-performance time-series forecasting library in Rust. Prophet reimplementation running in production
-                            for mission-critical decision systems.
-                        </p>
-                        <ul class="tag-list">
-                            <li class="tech-tag">Rust</li>
-                            <li class="tech-tag">Time-Series</li>
-                            <li class="tech-tag">Production ML</li>
-                        </ul>
-                        <a href="https://ryanbieber.github.io/farseer/" target="_blank" rel="noopener noreferrer">View Project →</a>
-                    </article>
-                </div>
-                <p class="center-cta">
-                    <a href="projects.html" class="btn secondary">View All Projects</a>
-                </p>
-            </section>
-
             <section class="container dialog-panel dark" id="recent-posts" aria-labelledby="recent-title">
                 <h2 class="title" id="recent-title">Recent Blog Posts</h2>
                 <article class="blog-preview">
                     <h3><a href="blog/prophet-rust-rewrite.html">Rewriting Prophet in Rust: Lessons and Discoveries</a></h3>
-                    <div class="blog-meta">October 31, 2025 • 8 min read</div>
+                    <time class="blog-meta" datetime="2025-10-31">October 31, 2025 • 8 min read</time>
                     <ul class="tag-list">
                         <li class="tech-tag">Rust</li>
                         <li class="tech-tag">Prophet</li>

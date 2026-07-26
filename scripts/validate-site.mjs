@@ -52,6 +52,17 @@ const excludedPublicRepositories = [
     "ryanbieber.github.io"
 ];
 
+const expectedRecentActivity = [
+    ["time-vs-timing", "8806622078412c26a810f021e47eaf16759824d1", "2026-07-23T23:14:48Z"],
+    ["time-vs-timing", "286455e83e85aa2539e49621cda09d78670978e4", "2026-07-23T20:51:29Z"],
+    ["libraryofbabel", "def73c0dc50532ec0a2c26463394f2d3502c823e", "2026-07-18T17:00:20Z"],
+    ["libraryofbabel", "5b130aa36f88a17caa67c5de91af04166301fff4", "2026-07-18T03:37:51Z"],
+    ["libraryofbabel", "d0acc97e8ab4bec942e9db1ba6557f311b4ceec6", "2026-07-17T19:24:14Z"],
+    ["just-a-simple-chart-bro", "3a43a15a9241a9582a437fe3cf72dd4f8fe63fe1", "2026-07-04T00:17:25Z"],
+    ["traffic-review", "68a29eec732ea86bf8790f976344ad013755486b", "2026-07-01T02:39:13Z"],
+    ["traffic-review", "5d999a36e69f0cd4a54356f032fda78223694fc9", "2026-06-30T14:42:43Z"]
+];
+
 const siteExtensions = new Set([".html", ".css", ".js"]);
 const ignoredDirectories = new Set([".git", "node_modules", "screenshots"]);
 
@@ -215,6 +226,57 @@ for (const file of htmlFiles) {
     }
 }
 
+const indexHtml = htmlByPath.get("index.html") ?? "";
+const activityItems = [...indexHtml.matchAll(
+    /<li\b([^>]*\bdata-activity-item\b[^>]*)>([\s\S]*?)<\/li>/gi
+)].map((match) => ({
+    attributes: match[1],
+    body: match[2]
+}));
+const actualRecentActivity = activityItems.map(({ attributes, body }) => {
+    const tag = `<li ${attributes}>`;
+    const timeTag = body.match(/<time\b[^>]*>/i)?.[0] ?? "";
+
+    return [
+        getAttribute(tag, "data-repository"),
+        getAttribute(tag, "data-commit"),
+        getAttribute(timeTag, "datetime")
+    ];
+});
+
+assert(activityItems.length === 8, `Expected 8 recent public commits, found ${activityItems.length}.`);
+assert(
+    JSON.stringify(actualRecentActivity) === JSON.stringify(expectedRecentActivity),
+    "Recent public commits or their chronological order do not match the July 26, 2026 snapshot."
+);
+assert(
+    new Set(actualRecentActivity.map(([, commit]) => commit)).size === activityItems.length,
+    "Recent public commits must be unique."
+);
+assert(
+    /Updated July 26, 2026\./.test(indexHtml),
+    "Recent public activity snapshot date is missing or incorrect."
+);
+
+for (const { attributes, body } of activityItems) {
+    const tag = `<li ${attributes}>`;
+    const repository = getAttribute(tag, "data-repository") ?? "";
+    const commit = getAttribute(tag, "data-commit") ?? "";
+    const expectedCommitUrl = `https://github.com/ryanbieber/${repository}/commit/${commit}`;
+    const shortSha = commit.slice(0, 7);
+
+    assert(expectedPublicRepositories.includes(repository), "Recent activity references a repository outside the public archive.");
+    assert(
+        body.includes(`href="${expectedCommitUrl}"`),
+        `Recent activity entry is missing its canonical commit URL.`
+    );
+    assert(
+        new RegExp(`<code\\b[^>]*>${shortSha}<\\/code>`, "i").test(body),
+        `Recent activity entry is missing its seven-character SHA.`
+    );
+    assert(!/\b(?:merge|bot|deploy|pages sync)\b/i.test(stripMarkup(body)), "Recent activity contains excluded low-signal commit text.");
+}
+
 const projectsHtml = htmlByPath.get("projects.html") ?? "";
 const publicCards = [...projectsHtml.matchAll(
     /<li\b[^>]*data-archive-item[^>]*data-visibility="public"[^>]*>[\s\S]*?<h3>([^<]+)<\/h3>[\s\S]*?<\/article>\s*<\/li>/gi
@@ -264,6 +326,14 @@ assert(!/api\.github\.com|github[_-]?token|ghp_/i.test(projectsScript), "project
 
 const siteStylesheet = await readFile(path.join(root, "styles.css"), "utf8");
 assert(/:focus-visible\b/.test(siteStylesheet), "Site styles must provide a visible keyboard-focus treatment.");
+assert(
+    /:focus\s*\{[^}]*outline\s*:\s*2px/si.test(siteStylesheet),
+    "Site styles must retain a keyboard-focus fallback."
+);
+assert(
+    !/\*:focus\s*\{[^}]*outline\s*:\s*0/si.test(siteStylesheet),
+    "Site styles must not erase the fallback focus outline."
+);
 assert(
     /input\[type="radio"\]:focus-visible\s*\+\s*\.option/.test(siteStylesheet),
     "Site styles must expose keyboard focus on themed radio controls."
